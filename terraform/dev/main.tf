@@ -10,7 +10,7 @@ resource "random_string" "prefix" {
 module "bca-infrastructure" {
   source = "git::https://github.com/bashbang/bca-tfmodues.git?ref=dev-0.0.51"
   # General module variables
-  rg_name  = "${var.environment}-POC"
+  rg_name  = "${var.RG_Presyntax}Web-Arch-PoC-01"
   location = var.location
   subscription_id = var.subscription_id
 
