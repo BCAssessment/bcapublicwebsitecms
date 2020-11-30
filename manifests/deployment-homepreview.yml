@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "homepreviewapp"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "homepreviewapp"
+  template:
+    metadata:
+      labels:
+        app: "homepreviewapp"
+    spec:
+      containers:
+        - name: "homepreviewapp"
+          image: "dev4gqggmqqacr.azurecr.io/devaks"
+          ports:
+          - containerPort: 80

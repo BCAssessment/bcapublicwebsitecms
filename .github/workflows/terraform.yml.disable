@@ -1,0 +1,64 @@
+name: 'Terraform'
+# TODO: all in one right now.  Consider separation  of TF pipeline from compile/build pipeline
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+
+jobs:
+  build-and-deploy:
+    name: 'Update Infrastructure'
+    runs-on: ubuntu-latest
+
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+    - name: Baseline the OS & Install OS Depends
+      # sudo isn't available on the "act" version of Github Actions so the workaround is to install it
+      # need to use sudo during "act" execution, but doesn't exist.  these commands will fail during normal github actions 
+      #apt update
+      #apt install sudo
+      run: |
+        #apt update
+        #apt install sudo
+        sudo apt-get -y update
+        sudo apt-get -y install zip
+
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+
+    # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        # TODO: To get working in "act" may need to obtain this token and reference locally. be sure to include reference in the .gitignore to keep secret.
+        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+
+    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+    - name: Terraform Init
+      working-directory: ${{ github.workspace }}/terraform/dev/
+      run: terraform init
+
+    # Checks that all Terraform configuration files adhere to a canonical format
+    - name: Terraform Format
+      working-directory: ${{ github.workspace }}/terraform/dev/
+      run: terraform fmt -check
+
+    # Generates an execution plan for Terraform
+    - name: Terraform Plan
+      working-directory: ${{ github.workspace }}/terraform/dev/
+      run: terraform plan
+
+      # On push to main, build or change infrastructure according to Terraform configuration files
+      # TODO: Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
+    - name: Terraform Apply
+      working-directory: ${{ github.workspace }}/terraform/dev/
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      run: terraform apply -auto-approve

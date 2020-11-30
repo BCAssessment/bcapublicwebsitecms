@@ -1,0 +1,933 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<!-- Mirrored from www.bcassessment.ca/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Nov 2020 19:10:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico" />
+    <title>BC Assessment - Independent, uniform and efficient property assessment</title>
+    <meta name="keywords" content="property tax assessment, property, property assessment, property tax, tax assessment, valuation, property valuation, property value, British Columbia, british columbia, land taxation, assessment, Assessment Act, assessor, financing local government,  BC A" />
+    <meta name="description" content="BC Assessment provides current actual value assessments for tax purposes on all properties in British Columbia and provides expertise in real estate data, mass appraisal systems and management." />
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-109417385-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+
+    </script>
+
+    
+    <link href="Content/fontawesome/css/all.css" rel="stylesheet" />
+
+    <link href="Content/layoutcsse6fa.css?v=8YLIeZ0Gkxi4grEi0CJNft5P4vnlJWN7jk8ZZnsZq2s1" rel="stylesheet"/>
+
+    <link href="Content/responsivecss34ac.css?v=8Xfo7JuiHL90fQCTiPP6InlNe6yipG-zC6aamlH1qxE1" rel="stylesheet"/>
+
+    <script src="Scripts/layoutjs5184?v=nPmcH26C_uF1SN-KjKJDCk_KXMsk-OLoEzTQck-tY4U1"></script>
+
+
+    
+    
+    
+
+    <script>
+        var act = '';
+    </script>
+
+</head>
+<body>
+    <div>
+        <div id="public-menu" class="main-region">
+            <div class="content-area ">
+                <div class="logo-area logo-large" onclick="window.location.href='index1bf9.html?sp=1&amp;act=';">
+                    <img src="Content/Images/BC-Assessment-logo.png" style="margin-top:20px" />
+                </div>
+
+                <div class="menu-area">
+                    
+
+
+
+<style>
+    ul#ulloginmenu > li > a {
+        color: #07819a;
+    }
+</style>
+
+<script>
+    var gotobceid = function () {
+       window.location.href='https://sfs7.gov.bc.ca/affwebservices/public/saml2sso?SPID=https://auth.bcassessment.ca';
+    }
+
+    var gotoidir = function () {
+        window.location.href = 'https://sfs7.gov.bc.ca/affwebservices/public/saml2sso?SPID=bca-poc-auth-idir';
+    }
+    var gotoBCALogin = function () {
+
+        //window.location.href = '/Property/Dashboard?bcalogin=1';
+        window.location.href = 'https://www1.bcassessment.ca/Dashboard' +'?bcalogin=1';
+    }
+
+    var showBCeIDToolTip = function (tooltipalign) {
+
+        $('.bceidinfo').balloon({
+            html: true,
+            css: {
+                border: "solid 1px grey",
+                padding: "5px",
+                margin: "0px",
+                fontSize: "95%",
+                opacity: "1",
+                backgroundColor: "white",
+                fontWeight: 'normal',
+                color: "#777"
+            },
+            hideDuration: 300,
+            position: tooltipalign,
+            tipSize: 20,
+            classname: "logintooltip",
+
+            contents: "<p>Log in using your Business BCeID account for authorized access to BC Assessment products and services</p>"
+        });
+
+    }
+
+    var showIDIRToolTip = function (tooltipalign) {
+
+        $('.idirinfo').balloon({
+            html: true,
+            css: {
+                border: "solid 1px grey",
+                padding: "5px",
+                margin: "0px",
+                fontSize: "95%",
+                opacity: "1",
+                backgroundColor: "white",
+                fontWeight: 'normal',
+                color: "#777"
+            },
+            hideDuration: 300,
+            position: tooltipalign,
+            tipSize: 20,
+            classname: "logintooltip",
+
+            contents: "<p>Log in using your IDIR account for authorized access to BC Assessment products and services</p>"
+        });
+
+    }
+  
+    var shown = false;
+
+    var bceid_info = "<sup onmouseover='showBCeIDToolTip(\"left\")' onmouseenter='showBCeIDToolTip(\"left\")' ><img id='bceidinfoiconDDL' onmouseover='showBCeIDToolTip(\"left\")' onmouseenter='showBCeIDToolTip(\"left\")' class='bceidinfo' src='Content/Images/info_marigold.png'/></sup>";
+    var idir_info = "<sup onmouseover='showIDIRToolTip(\"left\")' onmouseenter='showIDIRToolTip(\"left\")'><img id='idirinfoiconDDL'  onmouseover='showIDIRToolTip(\"left\")'  onmouseenter='showIDIRToolTip(\"left\")' class='idirinfo'  src='Content/Images/info_marigold.png'/></sup>";
+    $(document).ready(function () {
+       
+        $('#bceidinfoiconDDL').hover(function () {
+            showBCeIDToolTip('left');
+        });
+
+        $('#bceidinfoicon').hover(function () {
+            showBCeIDToolTip('right');
+        });
+
+        $('#idirinfoiconDDL').hover(function () {
+            showIDIRToolTip('left');
+        });
+
+        $('#idirinfoicon').hover(function () {
+            showIDIRToolTip('right');
+        });
+
+        //$(document).click(function () {
+        //    $('#LoginLink').hideBalloon();
+        //});
+        $('body *:not(.balloon_login, .BCALoginRegisterPanel)').click(function () { //hide balloon when click outside
+            $('#LoginLink').hideBalloon();
+            shown = false;
+        });
+       
+        $('#LoginLink').on("click", function(e) {
+            e.stopPropagation(); // This is required to stop link event propagation
+            
+            if (!shown) {
+                $('#LoginLink').showBalloon({
+                    html: true,
+                    css: {
+                        //border: "solid 2px #2a6496",
+                        padding: "5px",
+                        margin: "0px",
+                        fontSize: "95%",
+                        opacity: "1",
+                        backgroundColor: "#E0F3F1",
+                        fontWeight: 'normal',
+                        width: '260px'
+                    },
+                    position: "bottom",
+                    offsetX: -20,
+                    classname: "balloon_login",
+                    tipSize: 12,
+                    hideDuration: 300,
+                    showDuration: 500,
+                    contents:
+                "<div class='table-row' id='divloginDropDown'>\
+<div class='loginDropdownLeft' id='divloginDropdownLeft'>\
+<h4>BC Assessment account</h4>\
+<p>Access personalized favourites, create comparisons and use our new interactive map</p>\
+<button class='LoginDDLButton' onclick='gotoBCALogin();return false;'>Log in</button>\
+<p>No account? <a href='https://auth.bcassessment.ca/register/'>Create one!</a></p>\
+</div>\
+<div class='loginDropdownRight' id='divloginDropdownRight'>\
+<h5 class='businessloginheader'>Or log in with an alternative account</h5>\
+<button id='btnLoginBCeID' class='LoginBUButton' onclick='gotobceid();return false;' >Log in with BCeID</button>" + bceid_info + " </br>\
+<button id='btnLoginIDIR' class='LoginBUButton'  onclick='gotoidir();return false;' >Log in with IDIR</button>" + idir_info + "\
+</div>\
+        </div>" });
+
+                //return false;
+
+                $('#bceidinfoiconDDL').hover(function () {
+                    showBCeIDToolTip('left');
+                });
+
+                $('#idirinfoiconDDL').hover(function () {
+                    showIDIRToolTip('left');
+                });
+
+                //$('#bceidinfoiconDDL_mobile').hover(function () {
+                //    showBCeIDToolTip('top left');
+                //});
+
+                //$('#idirinfoiconDDL_mobile').hover(function () {
+                //    showIDIRToolTip('bottom left');
+                //});
+
+                shown = !shown;
+            } else {
+                $('#LoginLink').hideBalloon();
+                shown = !shown;
+            }
+        })
+
+    });
+
+    //detect browser size change - hide login balloon
+    window.addEventListener("resize", function () {
+        $('.balloon_login').hide();
+        $('#LoginLink').hideBalloon();
+        shown = false;
+    }, false);
+</script>
+
+<div class="mobile-logo-container mobile-logo-auth-home">
+    
+<div class="logo-area logo-mobile" onclick="window.location.href='index1bf9.html?sp=1&amp;act=';">
+    <img class="logo-mobile-image" src="Content/Images/BCA-logo-wide.jpg" />
+    
+    
+</div>
+
+</div>
+
+
+<div class="Search-area">
+
+    <input name="input-search" id="input-search" type="text" placeholder="Search services and trends"
+            onkeypress="if (event.keyCode == 13) { var term = this.value; if (term && term.length > 0) { var newlocation = 'https://info.bcassessment.ca//search-results/Pages/Default.aspx?k=' + term; window.location.href = newlocation; } }">
+    <button id="btnSharePointSearch" value=""
+            onclick="var term = document.getElementById('input-search').value; if (term && term.length > 0) { var newlocation = 'https://info.bcassessment.ca//search-results/Pages/Default.aspx?k=' + term; window.location.href = newlocation; }">
+        <img src="content/Images/icn-search.png">
+    </button>
+    <div class="BCALoginRegisterPanel">
+        <a href="#" id="LoginLink">Log in <span class="caret"></span></a>       
+        <span>|</span> <a href="https://auth.bcassessment.ca/register/">Register</a>
+    </div>
+</div>
+    
+
+<style>
+    @font-face {
+        font-family: "Montserrat Regular";
+        src: url('Content/fonts/Montserrat-Regular.ttf') format('truetype');
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: "Montserrat Bold";
+        src: url('Content/fonts/Montserrat-Bold.ttf') format('truetype');
+        font-weight: bold;
+    }
+
+    #bca-navbar > * {
+        font-family: 'Montserrat Regular', sans-serif !important;
+    }
+
+    /*This is to fix a responsive UI random issue for Chrome, when Contac Us menu item appears in the second line*/
+    /*#bca-navbar ul {
+        width: max-content;
+    }*/
+</style>
+
+
+<div id="bca-navbar" class="clearfix menu-block" style="display:inline-block">
+    <nav class="navbar navbar-default bca-navbar">
+        <div class="container navcontainer homepage-navcontainer">
+            <div class="navbar-header">
+                <button type="button" id="nav-toggle" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#BCA-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="BCA-navbar-collapse-1" style="margin-bottom:5px;width:828px;">
+                <div class="bca-global-navigation">
+                    <ul class="nav navbar-nav navbar-home">
+
+                        
+
+
+                            <li id="assessment-search" class="top-level"><a id="searchlinkItemMenu" href="Property/AssessmentSearchefd6.html?bcalogin=1">Assessment search</a></li>
+
+                        <li id="services-products" class="dropdown bca-dropdown top-level">
+                            <a id="serviceslinkmenuitem" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services &amp;&nbsp;products <span class="caret"></span></a>
+                            <div class="dropdown-menu container bca-dropdown-menu" style="width:940px;top:auto;padding-top:20px;">
+                                <!-- dropdown-menu -->
+                                <div class="col-md-4 col-sm-6 bca-megamenu">
+                                    <div class="bca-menu-description">
+                                        <h2>
+                                            Services &amp; products
+                                        </h2>
+                                        <p>At BC Assessment, we provide convenient accessibility to a variety of online, self-service property-related services and products.</p>
+                                        <div class="seeMore"><a id="seemoreServices" href=https://info.bcassessment.ca/Services-products class="button-large button-light">See more</a></div>
+                                    </div>
+                                    <!-- /.bca-menu-description -->
+                                </div>
+                                <!-- /.col-md-4 -->
+                                <div class="col-md-8 col-sm-6 bca-dropdown-list">
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="servicesofgovernment" href=https://info.bcassessment.ca/Services-products/government>Services for government</a></li>
+                                        <li><a id="understandingprocess" href=https://info.bcassessment.ca/Services-products/Understanding-the-assessment-process>The assessment process</a></li>
+                                        <li><a id="updateproperty" href=https://info.bcassessment.ca/Services-products/update-your-property-information>Update your property information</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="appeallink" href=https://info.bcassessment.ca/Services-products/appeals>Appeals</a></li>
+                                        <li><a id="assessmentnotice" href=https://info.bcassessment.ca/Services-products/your-assessment-notice>Your assessment notice</a></li>
+                                        <li><a id="propertyinformationservices" href=https://info.bcassessment.ca/services-and-products/Pages/Buy-and-Exchange-Data.aspx>Property information services</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                </div><!-- /.col-md-8 -->
+                                <div class="seeMore-mobile col-xs-12"><a id="seemoreServices" href=https://info.bcassessment.ca/Services-products class="button-large button-light">See more</a></div>
+                            </div><!-- /.dropdown-menu -->
+                        </li>
+                        <!-- /.top-level -->
+                        <li id="property-info-trends" class="dropdown bca-dropdown top-level">
+                            <a href="#" id="propertyinformationtrends" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Property information &amp;&nbsp;trends <span class="caret"></span></a>
+                            <div class="dropdown-menu container bca-dropdown-menu" style="width:940px;top:auto;padding-top:20px;">
+                                <!-- dropdown-menu -->
+                                <div class="col-md-4 col-sm-6 bca-megamenu">
+                                    <div class="bca-menu-description">
+                                        <h2>Property information &amp; trends</h2>
+                                        <p>Property assessment information is announced on an annual basis.</p>
+                                        <div class="seeMore"><a id="seemoretrends" href=https://info.bcassessment.ca/property-information-trends class="button-large button-light">See more</a></div>
+                                        
+                                    </div>
+                                    <!-- /.bca-menu-description -->
+                                </div><!-- /.col-md-4 -->
+                                <div class="col-md-8 col-sm-6 bca-dropdown-list">
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="provincewide" href=https://info.bcassessment.ca/property-information-trends/property-assessment-of-bc/province-wide>Province-wide</a></li>
+                                        
+                                        <li><a id="Fraservalley" href=https://info.bcassessment.ca/property-information-trends/property-assessment-of-bc/lower-mainland>Lower Mainland</a></li>
+                                        <li><a id="vancouverisland" href=https://info.bcassessment.ca/property-information-trends/property-assessment-of-bc/vancouver-island-region>Vancouver Island</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="thompsonokanagan" href=https://info.bcassessment.ca/Property-information-and-trends/Pages/thompson-okanagan.aspx>Thompson Okanagan</a></li>
+                                        <li><a id="KooteneyColumbia" href=https://info.bcassessment.ca/Property-information-and-trends/Pages/kootenay-columbia.aspx>Kootenay Columbia</a></li>
+                                        <li><a id="northernbc" href=https://info.bcassessment.ca/Property-information-and-trends/Pages/northern-bc.aspx>Northern BC</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                </div><!-- /.col-md-8 -->
+                                <div class="seeMore-mobile col-xs-12"><a id="seemoretrends" href=https://info.bcassessment.ca/property-information-trends class="button-large button-light">See more</a></div>
+                            </div><!-- /.dropdown-menu -->
+                        </li>
+                        <li id="about-us" class="dropdown bca-dropdown top-level">
+                            <a id="aboutuslink" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About us <span class="caret"></span><span class="about-us-extended" style="display: none;"> &nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+                            <div class="dropdown-menu container bca-dropdown-menu" style="width:940px;top:auto;padding-top:20px;">
+                                <!-- dropdown-menu -->
+                                <div class="col-md-4 col-sm-6 bca-megamenu">
+                                    <div class="bca-menu-description">
+                                        <h2>About us</h2>
+                                        <p>BC Assessment develops and maintains real property assessments throughout British Columbia in addition to providing real property information​.</p>
+                                        <div class="seeMore"><a id="seemoreaboutus" href=https://info.bcassessment.ca/about-us class="button-large button-light">See more</a></div>
+                                    </div><!-- /.bca-menu-description -->
+                                </div><!-- /.col-md-4 -->
+                                <div class="col-md-8 col-sm-6 bca-dropdown-list">
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="aboutbca" href=https://info.bcassessment.ca/about-us/about-BC-Assessment>About BC Assessment</a></li>
+                                        <li><a id="howbcaworks" href=https://info.bcassessment.ca/about-us/how-BC-Assessment-works>How BC Assessment works</a></li>
+
+                                        <li><a href=https://info.bcassessment.ca/About-Us/vision-mission-values>Our vision, mission, and values</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="reportandplans" href=https://info.bcassessment.ca/about-us/Reports-and-Plans>Reports and plans</a></li>
+                                        <li><a id="awardslink" href=https://info.bcassessment.ca/about-us/awards>Awards</a></li>
+                                        <li><a id="statedcaseslinks" href=https://info.bcassessment.ca/About-Us/stated-cases>Stated cases</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                </div><!-- /.col-md-8 -->
+                                <div class="seeMore-mobile col-xs-12"><a id="seemoreaboutus" href=https://info.bcassessment.ca/about-us class="button-large button-light">See more</a></div>
+                            </div><!-- /.dropdown-menu -->
+                        </li>
+                        <li id="contactuslink" class="top-level"><a href=https://info.bcassessment.ca/contact-us>Contact us</a></li>
+                    </ul>
+                </div><!-- /.bca-global-navigation -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav><!-- /.navbar-nav -->
+</div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+<div class="main-region">
+    <div id="public-home">
+
+        <link href="Content/homepagecompoenentcss2900.css?v=e9sM35Kpp6BYSYeKMzPlmR4Gb3QXyKLrCK8llMRcPfs1" rel="stylesheet"/>
+
+
+
+
+        
+
+
+
+
+<div class='section header' id="banner">
+    <!-- <div class='photo'>
+        <div class="bannerlightfamily">
+
+            <h3>The uniform valuation date of</h3>
+            <h2>July 1, 2019</h2>
+            <h3>determined your 2020 property assessment</h3>
+            <h3></h3>
+
+        </div>
+
+    </div> -->
+</div>
+
+
+
+        
+
+
+<script src="Scripts/App/searchjs8943?v=RLStWzNGsvQcSo2SZTlGxUJXpw2jjXJUzwxLKmemAVs1"></script>
+
+<script>
+    try {
+        if (bcaPortal != undefined)
+            bcaPortal.SearchSiteUrl('index.html')
+    }
+    catch (err) {
+        console.log(err);
+    }
+
+</script>
+
+<link href="Content/searchbarcss7d2a.css?v=adVpCly1VWNJwuaIPHxQAsDfVy1pxShsO8rTbG2lvew1" rel="stylesheet"/>
+
+
+<div id="searchSection">
+    <div Id="Searchbar" class="searchBanner-body">
+        
+            <p>
+                <span>Find your property assessment</span>
+                <button id="searchcollapsecontrol" class="searchexpand expand"></button>
+            </p>
+
+        <div id="searchbody">
+            <select id="ddlSearchType" class="dropMenu left">
+                <option value="Address">Civic address</option>
+                <option value="Roll">Roll</option>
+
+                <option value="Plan">Plan</option>
+                <option value="PID">PID</option>
+            </select>
+
+            <input type="text" id="rsbSearch" name="searchAddress" maxlength="100" class="bannerSearch ui-autocomplete-input" placeholder="Enter address">
+
+            <input type="text" id="txtJurisdiction" name="searchJurisdiction" maxlength="75" class="bannerSearch ui-autocomplete-input" placeholder="Enter jurisdiction #" />
+            <input type="text" id="txtRollNumber" name="searchRoll" maxlength="30" class="bannerSearch" placeholder="Enter complete roll #" />
+
+            <input type="text" id="txtPlan" name="searchPlan" maxlength="30" class="bannerSearch" placeholder="Enter plan #" />
+            <input type="text" id="txtLot" name="searchLot" maxlength="30" class="bannerSearch" placeholder="Enter lot #" />
+
+            <input type="text" id="txtPID" name="searchPID" maxlength="15" class="bannerSearch" placeholder="Enter complete PID" />
+            <button id="btnSearch" style="display:none">
+                <img src="content/Images/icn-search.png" style="" />
+            </button>
+            <div id="search-info">
+                <span>Use of bcassessment.ca implies agreement with our</span>
+                <button id="disclaimerinfo" class="disclaimerinfoexpand expand"></button>
+                <a id="tocSearchBar" href="https://info.bcassessment.ca/Pages/Terms_Of_Use.aspx">terms of use</a><span>, </span>
+                <a id="collectionnoticeSearchBar" href="https://info.bcassessment.ca/Pages/Collection_notice.aspx">collection notice</a><span> and </span>
+                <a id="privacysearchbar" href="https://info.bcassessment.ca/Privacy">privacy statements</a>.
+            </div>
+
+            <div id="search-disclaimer">
+                <p>
+                    Any commercial use of these data in whole or in part, directly or indirectly,
+                    including the use of such data for business, residential address or telephone
+                    directory services or any solicitation service is specifically prohibited except with the prior written authority of the owner of the copyright.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="divInProgress" tabindex="-1" role="dialog" style="display: none">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content contentdata" id="inprogressContent">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Search in progress</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Please wait, system is searching data for your input.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalsubunits" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content" id="subunitcontents" style="">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                        </button>
+                        <h1 class="modal-title" id="SubUnitHeader" style="">
+                            Please select a unit
+                        </h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="spanunitCount" style=""></h2>
+                        <select id="ddlSubUnits" class="MultiUnit"></select>
+                        <p id="maxLimitMessage" style="">
+                            There are only 700 units listed here, please use Roll# search to get details about your property.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="divValidations" tabindex="-1" role="dialog" aria-labelledby="divValidationsLabel" aria-hidden="true" style="display: none">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content contentdata" id="ValidationsContent">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" onclick="bcaPortal.clearValidationsbackdrop();">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                        </button>
+                        <h4 class="modal-title" id="divValidationsLabel"></h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <p id="pvalidationMessage">
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="closeButton" data-dismiss="modal" onclick="bcaPortal.clearValidationsbackdrop();">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="searchresultsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content contentdata searchModalContent" id="searchResultsContent">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" onclick="bcaPortal.clearResultsbackdrop();">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Multiple properties found</h4>
+                        <span class="modalPlanSection"></span>
+
+                    </div>
+                    <div class="modal-body">
+
+                        <table id="tbladdressresults" class="display aasMultiple" cellspacing="0" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <td style="width: 10%">Plan</td>
+                                    <td style="width: 10%">PID</td>
+                                    <td style="width: 50%">Address</td>
+                                    <td style="width: 30%">Jurisdiction-Roll</td>
+
+                                </tr>
+                            </thead>
+                           
+                            
+                            <tbody></tbody>
+                        </table>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fadecontainer"></div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+        document.getElementById('ddlSearchType').selectedIndex = 0; //THIS IS ADDED TO SET DEFAULT 'CIVIC ADDRESS' Search option on browser back button
+        document.getElementById('rsbSearch').value = '';//THIS IS ADDED TO SET DEFAULT 'CIVIC ADDRESS' Search option on browser back button
+
+        $('#disclaimerinfo').click(function (e) {
+
+            if ($('#disclaimerinfo').hasClass('expand')) {
+                $('#disclaimerinfo').removeClass('expand');
+                $('#disclaimerinfo').addClass('collapse')
+                $('#search-disclaimer').css("display", "block");
+
+            }
+            else {
+                $('#disclaimerinfo').removeClass('collapse');
+                $('#disclaimerinfo').addClass('expand')
+                $('#search-disclaimer').css("display", "none");
+
+            }
+        });
+
+        // - property details page: collapse search bar by default
+        $('#searchcollapsecontrol').click(function (e) {
+            if ($('#searchcollapsecontrol').hasClass('expand')) {
+                $('#searchcollapsecontrol').removeClass('expand');
+                $('#searchcollapsecontrol').addClass('collapse')
+                $('#searchbody').css("display", "block");
+            }
+            else {
+                $('#searchcollapsecontrol').removeClass('collapse');
+                $('#searchcollapsecontrol').addClass('expand')
+                $('#searchbody').css("display", "none");
+            }
+        });
+
+
+    })
+</script>
+
+
+
+
+        
+
+<div id="bcaservicessection" class="section1">
+    <h4 align="center">BC Assessment services & products</h4>
+    <div class="services-table-menu">
+        <div class="row services-table-row">
+            <div id="understandingtheprocessimagelink" class="col-xs-12 col-sm-6 col-lg-3 services-table-link" onclick="window.location.href = 'https://info.bcassessment.ca/Services-products/Understanding-the-assessment-process'">
+                <img src="Content/Images/assessment-process.svg"  style="width:104px;" />
+                <a>Understanding the assessment process</a>       
+                <hr class="servicesseparator" />       
+            </div>
+           
+            <div id="assessmentnoticeimagelink" class="col-xs-12 col-sm-6 col-lg-2 services-table-link" onclick="window.location.href = 'https://info.bcassessment.ca/Services-products/your-assessment-notice'">
+                <img src="Content/Images/Assessment-Notice.svg" />
+                <a>Your assessment notice & property taxes</a>
+                <hr class="servicesseparator" />
+            </div>
+            
+            <div id="updateyourproertyinformationimagelink" class="col-xs-12 col-sm-6 col-lg-3 services-table-link" onclick="window.location.href = 'https://info.bcassessment.ca/Services-products/update-your-property-information'">
+                <img src="Content/Images/update-property-information.svg" />
+                <a>Change address & property information</a>
+                <hr class="servicesseparator " />
+            </div>
+           
+            <div id="serviceproductsimagelink" class="col-xs-12 col-sm-6 col-lg-2 services-table-link" onclick="window.location.href = 'https://info.bcassessment.ca/Services-products/appeals'">
+                <img src="Content/Images/appealsnew.png" />
+                <a>Appeals</a>
+                <hr class="servicesseparator lastseperator" />
+            </div>
+            <div id="interactivemaplink" class="col-xs-12 col-sm-12   col-lg-2 services-table-link" onclick="window.location.href = 'http://bcagis.maps.arcgis.com/apps/MapSeries/index.html?appid=ba3d56fb4c144727896b25989bdf00d2'">
+                <img src="Content/Images/interactivemapicon.png" />
+                <a>Interactive property trends map</a>
+            </div>
+        </div>
+       
+    </div>
+    <div id="seemoreproductssection">
+        <button id="seemoreproductsimagelink" class="btn1" onclick="window.location.href = 'https://info.bcassessment.ca/Services-products'">See more services & products </button>
+    </div>
+</div>
+
+
+
+<div class="register-info-section">
+    <div class="register-info-region">
+        <h1>Search using our new map feature</h1>
+        <p class="main-info-text">Set up a free account now to use advanced property search and comparison features, and access your personal selections on all your devices.</p>
+          <button id="registerButton" class="btn3" onclick="window.location.href = 'https://auth.bcassessment.ca/register/'">Register now for free</button>
+        <p>
+            Already have an account? <a href="Home/LoginInfo.html">Log in</a>
+        </p>
+    </div>
+</div>
+
+        <div class="row markettrendsnewssection" style="">
+            <div class="col-xs-12 col-sm-6 col-lg-5 col-lg-push-1  verticalseparator" id="gismarkettrends">
+                <h4>Market trends</h4>
+                <div>
+
+                    
+
+
+<div id="trends" class="sp-article">
+    <div class="sp-article-container">
+       
+            <div class="sp-article-img-container">
+                <img src="Content/Images/interactivemap.jpg" height="100" />
+            </div>
+        
+        <div class="withimageContainerTrends">
+            <p class="withImageTitleTrends">
+                <a href="http://bcagis.maps.arcgis.com/apps/MapSeries/index.html?appid=ba3d56fb4c144727896b25989bdf00d2">Interactive property trend maps </a>
+            </p>
+          
+
+        </div>
+    </div>
+    <div class="sp-article-comments">
+        <p>Check out our interactive maps to access local market trends for various communities, average market movement for different property classes, and the top 500 valued residential properties</p>
+    </div>
+
+    <div class="sp-article-more">
+        <a href="http://bcagis.maps.arcgis.com/apps/MapSeries/index.html?appid=ba3d56fb4c144727896b25989bdf00d2">See maps</a>
+    </div>
+</div>
+
+
+                </div>
+
+                <hr class="markettrendsnewsseperator" />
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-lg-5 col-lg-push-1 col-lg-offset-0" id="homenewssection">
+                <h4>News</h4>
+                <div>
+                    
+
+
+<div id="news" class="sp-article">
+    <div class="sp-article-container">
+            <div class="sp-article-img-container">
+                <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4REARXhpZgAATU0AKgAAAAgABAE7AAIAAAASAAAISodpAAQAAAABAAAIXJydAAEAAAAkAAAQ1OocAAcAAAgMAAAAPgAAAAAc6gAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEZsb29kLCBKaW0gQkNBOkVYAAAFkAMAAgAAABQAABCqkAQAAgAAABQAABC+kpEAAgAAAAMzMAAAkpIAAgAAAAMzMAAA6hwABwAACAwAAAieAAAAABzqAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAxNjowMTowOCAxMzoxNTozMgAyMDE2OjAxOjA4IDEzOjE1OjMyAAAARgBsAG8AbwBkACwAIABKAGkAbQAgAEIAQwBBADoARQBYAAAA/+ELJGh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4NCjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iPjxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+PHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9InV1aWQ6ZmFmNWJkZDUtYmEzZC0xMWRhLWFkMzEtZDMzZDc1MTgyZjFiIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iLz48cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0idXVpZDpmYWY1YmRkNS1iYTNkLTExZGEtYWQzMS1kMzNkNzUxODJmMWIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+PHhtcDpDcmVhdGVEYXRlPjIwMTYtMDEtMDhUMTM6MTU6MzIuMjk4PC94bXA6Q3JlYXRlRGF0ZT48L3JkZjpEZXNjcmlwdGlvbj48cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0idXVpZDpmYWY1YmRkNS1iYTNkLTExZGEtYWQzMS1kMzNkNzUxODJmMWIiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyI+PGRjOmNyZWF0b3I+PHJkZjpTZXEgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48cmRmOmxpPkZsb29kLCBKaW0gQkNBOkVYPC9yZGY6bGk+PC9yZGY6U2VxPg0KCQkJPC9kYzpjcmVhdG9yPjwvcmRmOkRlc2NyaXB0aW9uPjwvcmRmOlJERj48L3g6eG1wbWV0YT4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgPD94cGFja2V0IGVuZD0ndyc/Pv/bAEMABwUFBgUEBwYFBggHBwgKEQsKCQkKFQ8QDBEYFRoZGBUYFxseJyEbHSUdFxgiLiIlKCkrLCsaIC8zLyoyJyorKv/bAEMBBwgICgkKFAsLFCocGBwqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKv/AABEIAQUBrQMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APWP89aKPpRXecgUZooPf/GgAooooAM0UGigAo60UUAFGaKKADvRRQTQAZozRmjNABmijNFABnjrR+tFFABR60Un0oAU0UUZzQAZ/wA5ooooAKKKM0AFFFFACGjOB/8AXpc0UAJ1pe2KPxooAKKKKADNBoxngVIIZD0Rj9BQ2luFmyHH+c0Yqx5DhTm3kJPqwH9aRbd2Yl0dR6cZ/nWXtVexfI7EFHap2tXxuTDDHQHkfhUI5HH41omnsQ01uHtQBQBxRmmAAYzQKM56H60dBzQAmOKBzUsUEkw+RSamFjMBgoCP97FS5JbjUWypijH+c1eNm2FPlEnPQycUjWm4fcMZ9N2RUe1iV7NlKjNTSW0kS7mAZf7wNQ9K1umQ01uFH50UY/zmmA6ig0UgDNGc96M0f560ABoozRQAUZozR+OaACij6UUAFFB/zzRQAUUE5ozz/wDXoADzRQeaKACijNFABRRRQAZz3o/Gk75paACk6UE0tAB+NFFGaACjNFHrQAZooz2oNABRmij9aAEJ5paKKAA06KNp5BGnJJ9ab1ra021ESbzy7foPSonLlRUY3Y600wIuW+Zu5q+LVRxipo1G0AVMFxz3ricm3qdCSWxReDHTHNVpIx371pTABCf51nXEijbSuVsZs+UO4HNU5ZVZvm6929au3O1lZQeSMj61hXszHpjkZGfWtYeRnK1rMu59DSHrWTp+qBr0WkjD58lD3z6fzrWyPWuxbHO9AA9KuWdi1x8zn5M/nVeCPzplTPB6/SuitolSMKOFHAFY1J8uiNIRvuLFbKqAKBjsKm8g9qsxIAvPWn8Yrl3NzPlhIUdyapyR4YgkA9ua1rgokW5iAB3JrMmljMmQ6n8aEHmZs7mMnae3FUTIrtwQCx6etWLxgFY/3evsP/1Gubvrkw8hyoznPpzzXTTTuYzsbeeKMkdM/nWfpWpDUInDMPNiOCPUetaIYj1/CuhqxktRaM0Ud6QBRuoooAM0Z/zmkpfpQAUUZpc0AJn/ADmg80GigA70GijP+c0ABoo6/wD66M0AFFGaQmgBaD+tJmloACc0UUUAFFByf/10ZoAKKKKACiiigA/z1ooooAKP89aCaKAD60E/5zQTRnOaACiikoAkhG6VQehPNb9u46DpwK5xlmcD7PMImyPmK7uO/erCi+Rgftxb2Eaj/PT9a4MRVjGdmdVKDcbnURyjk547c9KS81G2sLJ7q7lWKGMAu7nAUZxzXLb9REkO3UpAGABBjQ5OCc9P0rM8S6lc23h28e6uXmjW0JKiHPzFW5O0cD9OawjUUnZGrg0rs7e4ukkt8xsHVuQwOQRjOarRDMAIxjA6mvLPAevavfeAbaU6gPMt1aJVMSn7kfAOfwqGTxLrz2VoU1Vo5pVJKhQdhwxwexxtyPxqlNK6fQXK3sd49wke1CfugDr04rDvLlRG+WyQw/DmsaWDVTcRwJrch3TJHvMKEtlC5J479K5vU7jWvLEkWo798Eb4Majl5GUDH4da0jVi3oS4Nbl/V7po7kPA7K6OsiEHoR1H55NdT4a106rYRLdsv2xVxIy9JOThvbI/Ue9eM3WrakzbpLoMexMY6ZqXR/Gt3poj2Wu94Mgv5uN/OemDiu2nOLjZnNOMr3R9EWTBZiSfYVuQSrgdfWuPjW4vUhmiuZLQGJHITawJPJHI7etXhDdiJsajcDg4wqcdO+33NedWrxjNpnVToycUdjHKu3rVHVzJLCiQTeSfvs+7GABXOyNeq+f7RusFW7pg/NjpjjiuN+Jup65peg/a9M126tvLl8ll2xtvBQkHlc5yP1qI14ydkW6MrHX+HvEkeqR6pp0kzyz2sm4eYeSjAEY/EH860JVzA/B4WvmjQvEevWesG6i1Kd7i8QxTEgHevXp+fTmvQrm5vbq9t7a31u7SGSIb3jl5AP8AD78gjOe/tzvUtBoiCconf386nzsN97OK5PU7sDYcD7vzD24P9DWZqD6l1XWbobbSSbquCwYgdvpXLeIJNUsp7pU1WZ0jmkjG8LkhVj56d/MrejXp3MKtGdjrPDl55fieFFLAMDGwznIOcfqP1r0Ee5+leCeFtQvpfGmlCW7kKyXUYcAL8wz06fSveAcdCTXZOSm7o54xcdGPzRRRmoKDNGaP1/GjrQAfSigmigAozRRQAZooooAUmkPuaUc+5rWttHJT99y/XaDwP8TUyko7jUXIzIIZLiQJCpZjzip7jTbq3XdJEdvcqQcfrWo2iIrb+rqM5z09hVeSyMDCUO24DJ561l7V30NOSxkdeaCc1euthJ8xFJAzuAwxH9cVRJXnawODzz+P9a0jK5DjYM0ZozR71ZIZoNFFABQTmiigAzRRR3oAM0Ude9J0FAC0UdKKADNFGaD1oAM+lFBNFABRnPeij6UAOVnBzHtLf7XTrUpNxs5MZ4/un396iQkt8hXPYtnHWpQbhkAby+fr7+9ePjf4p6GH+AizdLJakNCU4yChz9z1z9fzqjqUb3GjajBMy7ZLDZkDpuBHr71oYuQYwzwsd64IQgAbfr1qpN5htLtXKH/Q1JwDwfzrGk7VImtT4Gjz34dWl7B4cu4UliZftEyKAp3bljx6+4q1KLP7PFcRj9+0Xm20Gc7fm2jOP+BZ57kdqn8ApOmn3wR4y66jOCxB+Y7B79KoapJd2djDcWlrFJiylwoJyvzkFjjn16e9dEZNyku5m4rlj5FxdQuF1ONZmhQi/jQbicf6jjkeua5q7bUDDFu8t1NtbEgjGMzNgZz60ad4lurvxFC19BGkkt1GwXaQqkJtBxyed3JpuoSXphj2rGWMFqcEHAPntgdfU1HK4y1G2pR0OIvJLlY/naPI4GB/n1rNFwywy7upHUH61fvml4U7AAPfn9axWmIt5A3JIIxmvRgcsu59TWM8223t7ZkCpaxswkUtwRxggj+6fzq0kt84UNOiht33Y+h496zbFpvtyeRsCfYrbllJz9/3rSjW6K8SJ/EciM+q+/1rxsVb20jvov8AdofLHcbGJn+ba/O0f3x2rivijHI3hi63yF1+2rtUgDrGfSu1mS4ELYnGSHyQg/vj3rjfiVHMPDkpZ96i9U424z+7OKzhKzubRV5JM5Hw3YGXwDBchI3eJpHP7tS21WUsMkd1z9RxV6Oe6l1iGXcQEVUIBDfKVO3n1GD+RqPwcJH8CCMXDKvkXTFQinIwvHPrmjxHb6tBeAaPcy3KRrCxZIl4JVgowMkjOcfWux83M02YKyhsI13dyxTg3W8rp82/dHnDCTlf8+tYfiw3iahfAz5Q3cwOV6ZWI5+nT8qm0i6v54dStroKklvY3A5j2sfmJb8c1F4vS4TUbsPIjs1xJnA6Exwk/UCuimuWXKzCesbmV4Qkl/4TnRvnBzeR9vf/AOvX0P19T9DXzv4QVv8AhPNHywOLyI5x2z9a+iPwP516KOF6aD6KKM0CDNH40UUAHeiiigAooooAKP8APWijNAF7S4vMug7DIQ8A+tdPEoC5B7+tclbXs1q+1LYyqf4g4HOfSri+JbiMhWsMjZk7ZM84z/LFcNapFSs2dVOEnHRHS8VSuWjaRRuBw2xh+H/1x+dQWetx3Vo07xPEV6oeTXATfEeA+OLmwtraWeJ4fMUOQhWVByPcFQMURtJcwO6djpdRmEVpuX78cgAOfwrkv7YW01GWN/8AVxOFIJx+7flD+B4/4FVLVPGOp3UREWgSRK80QLPOp5ZhhQB+ea4XU/Gs73DyNpmBLAEYecOcMSGHr0FddGUHuznqRmuh7Orh1DKcqwyD606qekyGbRLKVj80lvG559UBq53qyQooooAKM0UUAFFFFABRRRQAUZoooAKKKP8APWgA/GiijNABRRRQA+IsG+QAnHGTipS0+1SiRk5xhmNQoWD/ACAMcdzipT9pG3akWO+WOc8Y7V5GN/iHoYf4BP3++L5UxuH8R/u1Uk837HclxH/x6KRyeuasbp/MgAEfJXPJ4+QmqkskotLnz2iVBZrj5iOT0GTxXNR/iI1qX5Wch4F88pqKDySf7Tn3HJx90f4067e4LWTLaQgCzmLMJBub5sHOP880/wAHRTxXWtCMxNt1acZJP90/pUVyL1WtJo7KBQ1rOXxIc8OcsR+lbK/NInoiO8h+0+IUSW3gbddIy4JDLiIEHP15+ornbme63R4t0ceVaMSJPu4nbg+uTx+tdK9xdp4mTMUe37UoChsY/cj1rnPOnRWVofnVLYgE53AXTc++en+eSLuDuefakZW2sVX7o/iNYL7jGSRjAbvW7qMkh2jAAAHOaw2YmN93cN0NelT2OSZ9Q6bv+1xiPDf6Baghu33/APGtaMXDIQTGPvYwD6r71kaZNO00Bg8vBsLYktnnO/0rVjN0GA3w42sc7D/s+9eNi3+/kehQX7tDpjOd2ZIwNjHO08fP9a5L4jxy/wDCNT75FZTdqcbcE/IfeuqmW6G/MsfMcmPkP98e9ct8STcDwzdfNHJtuVIXaQT8v1rlUjppr30cl4HjlPgmY+eq7beYp+6zj5Ru7/SuouzM9/G63cM+9LTG2MjHDj19a5vwAk7+CbktKqqqSqDtzgbVyetdNqBuEuots1vK3l2rfIpGBkjn8/1rvrbyOWnsjE1QTDz9ywsTaX+1yv3fmOcc/wC10rmfFUdwt/fllRh5kjEg8D9zGfX0IrqdYa5WIxsYSfI1EkYI/rXL+KzcpdXSt5eCxHyg8BoI/f0FXRb5kRUVkYnhPefG+j5K5+2Rc/8AAh719FBiB39+a+dfCXmjxvo5Urk3sX5bh719EnJ6f5/WvZVmjzGPoo/z1ooEFFGaKACiiigApOfX9aWigAoz/nNGar38M1zp88NrObeeSMrHMCcox6Hj0oYFmOc79sS7ypG7DDgnsfzH51lX2o3MWLbykikEJKySTDa/ABHIyMAj161meD5ru2XV7O8L3M1vfbXnZuJCUUk88+1at/YwaqIxqFjDcCHcYxI+cHYo9K8Ksv3zbPTp/wANFY+LJ9Ls5VudHubx3dkka0ZGWMqvfJB5AyOO/vXiE/iCa78SHUrCExDdlQ5Gec+mfXFeta6v9i+G7w6fAIE82JnVJC2R8gOM+3FeWab4evLy5v4rTycWbPu3SZyAT7c9K68PVjyOJnWpu6kjvLy9uNiuluVP2uzLLuHfBxXmmr3cjNbny9p+zIDk9eDXfXtzP5lvE8BB+1Wm5g3DHAwPz/KvN9au3k+zhlwVtVU859f8f0q8OtSK0tD6L8P5/wCEZ0vcME2cJI/7ZitGqGhceHNNHT/Q4eM5/wCWYq/XecYUUUnOetABnmloPWigAooooAKM0UH86ACij/PWigAooooAKM0hNA6f/XoAPx/WlpD9aXNAD4mYMSgBOO5xUvm3O5gYYwMjBMmc8fSoY2KsSo3HHTOM1YaSbaMRLknvJ0/SvGxv8Q9DD/AQI8u6AsifMy9GP90+1QB5HguVeNB/oatkkn14q0HlaOH92nDJxv8A9n6VSummg028kjgWQrZLtUScsey/jXNR/iI2npFnJ+BjdmfVYnSNpBqs5Lbz8xAP+NRtLcSNYzJZKF+w3AYh8FiWIJI/GpfAU0802rSm3WB21SYtHI/zISvQ4zzSKt1G9rIllsH2SfOZvRuuPT+ufqd9VORHREdxNKviOIiBWH2qMlVbBUmDj72Mjn/DNYMz3G1pmhVw1vaEEMTgfaT/ADPFdLMsz67DtiQ5uomCh+RiEDHI96528+0RWUhZVLJb2gxnO4C5b+tEdRvRHmmo7224UD5cH5jWE+RBIO+GHBrfvlfap+XjjrWC5IjfcD/EOPWvTpPocUz6d0h5UlhjhVSo060PzkjaSGH9K1913tBUQgBWIzk84FZmnvKL/wAuJQVWwtmXc2ByZK1lad1I2xgYb+In+EV4mN/jy/roelQ/hoSX7WUbmEFlcdDx831rlvHqXTaRP5kkTQicZAjIbOzqDmurma4CN/q87JCOTjO6uX8cPcnw5P5/ksTON2zIwdh9642/dZ10VepE5T4ercHwTdbZI40xNg7cnlEznnnFb9yl0THIWtcmG22hEIwNx4P88/5PP+ADK/g68jV1CgTAZHcovv8ASuiuIZ4AmPsp221sRs3c/P0J/XP8+tejUv73qckehkaqbna27Yzn+0QGCnGMVzPitbgS3GdoyqFuvQ26f4H9K6vVDPu5MYXN+McnIx1rk/FBmYztIqbRFGCAT8ubYf0FaUdyKi0MXwgXHjjRwzDAvIs9f71fRHb1+hr528Kbx420b7mDexZz/vCvont6/Q17MdjzJDzRQaM+/wCtPoQGev8AjRR+NH40gA0mfelP+eaTFNALSEjPJoJwCSeO5rgvGXxR0/w9utbHF3eYPIOUU/8As36D61MpJLU1pUZ1XaJ2moalZ6ZAJb+6jgVvu725Y+w6n8KyNS8XabDp00tjeQTXGwmKNyybz6Zwa+ctY1zVfEmpPNcyyO0jbgu8kn0/yOBW9pt/quk2/wDpkRu4V+8Q2XQe/r9e1c1StKO33Hp08u9rBuDenXoex+CdRuL3TZjLaBG87Pyzq+cgEnI565ro2mfa6mH/AJZkg7xwdi1ynw9vhfaK81ovmI0uSd+MHHSurEk5kb9yvCED95nPyL7V5r953aM4xcFyvoc34uleXwrfBYW3NJFyWHqnpXGeFJnXWPEH7rB8uViC/Tk/412PiC6nPh68UWjuN8JxGwYsMqSAPwriPDRlTWPECAb/APR5Mndg8806S1mvQuo/dj6/oX7yWbzEaSMfLdWg+8D2B/p+tea628jSW2V2/wCjIMk/7PWvS7x5lnUmEsDc2oHz+oXHFeZa3I7zW6sm3FvGoyevyV34fyOSs9D6S0B2bw1pjMuwtZwkr6fu14rRPJrmfBviO01XRbO3B8q5itokMbt9/CgZU9+nT+ddKDgV2JprQ47MdnOaKbnmlBJpsBaQk/SlNJ1780IBaQ+1BPv+tBNABnNLTR7078aAA0gOc0p/zzSdOh4oQBnP+FL/AJ60n0NLmgBvc5pT04oNHagAB96D7Un0pQfWgCSE/veAW47VP5khC4hOeeriq8DFJMgbzjoCP8ateY7DiJjg9Nw9vevGx38RHoYb4CDzJNsWIW++oxuH92q8peXTbqF027raPo/PJx1HerSu/wC6PlHGVONw/un3qvI7tBMNhUi3iIwwyfnFc1H+IjWprE4vwHFcWt1q2xXn/wCJm8bnzRngH5uep55qxIxTyJVtZziyuMyFjzyc9/6U/wADmUX2uRmPLx6pKSQwII29Peh7mRGt9ljc/vbK6xIfu5ySeCeOn6iujeTIWiQSSTf2/CVhyGnjIJIJ4hHH06VzF3JILdwyMztb2wGT/wBPbHP9PxrqJriSPW4CYCUM0ezDgn/V88Vy8ktwIN4i/wCXa1B+bni6Y/j0/WlC45annF+zFBhcYUcE1z7H92/BC4PQfWug1ESLH93nbjr0rBdv3Dgg9D0r0qZyTPqGwmI1ZliQuv2K2KknAGTJ378VqCS48uUiJPunaPM9h14rK01satIUQtusbXvjH+srTSSfy8mBRw2cy+3sPevDxrtiJHpYf+EhZ5rj59tvGRtk3ZlIwM/Tn/P48346Mj6BMrIq/wCkLyGzn92a6WaSZIZD5ak7JD9/vke1ct4/uDb+HbmWZcp9oQ4Rsn7mO/vXG7uNkddGyqq5x/w5e4Hh68wEKgSYJbodq10dy86KmyO3TNrbjdG5OcuvU+9c78OGcaJqSHbgB227uR8o7V0Vys0bQbraJCbe1xsl+9mQZ5/Afn26V6VS95HHG1kZ2sXNz5zo0CqPL1DkPkH5a5bxRLci4mikTP7qIgA5G37McZ/nXVa19pK8QBzm/DfvcALtxnn0HNct4qdxcyoIW3GGPvwP9G4P6n8K0oPVEVdjE8JNIvjbRiSAPtkXf/aFfRHbufxr508OO/8Awl2k/KOb6Hjd/tivov8AP869mF7HmSH5pKWk7e3pmq0IFoJoP1puQOpAA6kmloApPpWTrvifTPDts02p3KoQMiIH5m9Pp9TXn/i/4wJYyGz0CLfP/FLJ1X8MnH6nHpXls0mpeJtTD3TmRy2Qu75F55Jz/M5NYyqWV1t3PUo4Ft2nv2X6/wBXOm8W/E/U/EIktNPZrezY9FGMr2HPJ+p49BXOaV4fur+UTXG6NCctK/3m57Z61v6d4ct7LEs586UDjK/KOOuK3FGWIHTPf615tXGJaU9fM+ow2V6J1dF2Rh/YLeycrbR7fkXJPzE8Hqav2o5f14HP4VLJamZt5cgbQBz2wadHbGJm+bI5z+leZKTk9dz34xjGPLFWO8+HaG2024FtAAj3G5sEAbseldbvnJkHkdIzj94OTsFcr4CMosZ1jVGHmhuXIOcfT3rrFknLP+7VT5fdj/cX2rrptuKPh8wVsTNLuZ9gZ5mP2q1CLj5h5m/b+79v8815Xohmg8Qa2gTfus5XcmTp0Of1r2CCWZGm/drwpOQ3OfK47c15RpbSJ4o1bMYLNp0hALey1207ezf9djy5X50izfSz/bIyICyCa1DgOPb/ABrzTWywkth5ZU/Z0+8w54616fftcrcKfIyPtFoMB/da8110uTZ/uipFsBy2d3Lc1vh2yKq0Ni3tbhLSB7e4YHYpCyOfTs3bvwa7Dw7451mwuFt9ajku7U8ByB5ie+7PzfjXNabdHy4Vt3DMUUbQQQeO4q5KWn3DyPLzwybSAx9vSlepF3scl0up7Dp+q2WqQ77K4WXaPmXoy/UHkVcrwm0truzukubC6mhkhO4BshlPp15Fd9pHxAy6wa3FtOcefGMDnuV/qPyreNW+jFo9juM8YopkM8NxEstvKssbDKOpyGHrT630ASnZznNJ3o+nNADvxoPNITx1o6c0gF6Ck69etJnnJoJz3oABS5zSHil6e9MBM9u1L2x7UnU0Z4xSuAvTikopd1MB8J2Sjgtx0HWrSTcHMbjcwx055HvVSIsGJjALY4BNTq91kfuVxnn5hx0968bHfxEd+GvyB5h3Q/uZMjbjkf3T71VkjWWymM8W4CCNvmUdQw9zUyyXe6DEC9V4JGfun3qF3uWiuEZAo8iIo2ehLgY6muej8aNqnws5fwJLIdU19/IkB/tCRtpI9+M5p325RPaSmC6O+zuAW2ll53d+mOf5fSo/A15J9q1uQQHYuoykeoBB68+1RtqXlz2riOcwmznAO35SWJPr07/5xXT9p/10M+iLFzIzeIbcpbvzcRAMSD/yy5/nXOPPL9lGYSCba2xzjB+1Of8A61dDJPONet3W3MuZ4lzxx+7HHX9f8nmZL2RLdUEZLLDav94cATv7+pH51MWUzz3VxIcMI88AH5h1rmJiwRicjhs11eqzzyKuE6KoOe5x9a5mZsK/XOGzn8a9Gmccuh9O6dKyX6hYHfdY2xyGAx/rPetQXMhUj7M3Rv4hxwPesXSXmF1biELt/sy1JLZ/2++R/X9a1JJroFhsj/i465HH+1714eP0rs9PDfw0Tyzu0T/6OxGJB98VxXxQkkHhG4EkGFW5iyd/ov8A9euumluVDsfL6SZH/Asetcb8UZLmTwndqwXyxcpux1I2jH64rnpP3kdK0ZzngB5F0vV1SAGMCQcScAbfTvXWXDyxyqTZqjCzt8ATAhsv9T3Fcf8AD+a4k/tff5TExu7Y6EEZrqLq31DykM1tHBLHBbho2k3qw8wYwQeOnHHeu+oruRyx2RT1N7po3aS22fLqBaMvuIyvTI4wM1yvieSVbq7DQMN0ajO7r/o2B/6Fmup1eS9DSkxxKCL9cZ9uvXFcn4mu7x5HL26KGt4/1t8A9fTJqqDuyauxheH2b/hKdKG3BN7D1Of+Wgr6N6//AFjXzbosky+JdNYADF5ER7fOPevpIjHAyefWvahseXIeT/nP1pM9aXP+c02ggUnPT1rjPiV4pHh3wzJHA+27uVKoMZwp4/U8fnXXTzJb28k0zbI41LsT2AGa+bfF+t3Hi/xnIY1wiy+XEmfT5Rn8v51nUlZWPQwVHmlztbbevQoeHtJGq3Es14zFBlmbOSzHOBmu3tbOCzURwRiNPQd+fXvUen2CWGnpAh3Hblj6nFXR/rCT0z3/AN6vAxFd1JabH3uDwsaENfi6siIC5zj7oz/3zUuOufX/ANmpGJx/wH/2U1L0Iz6j/wBCrl1udxDtwvHoMZPsaXALHknkjn6inGTK9MDaOv0NLnrzyzcfmKYjuPAomTR5jFGrgzclmx2rplku2unAt0K85Jc9PLXnpXP+CWk/sNwiAjz+7Y7CulWWb7QR5Sg4wRv6fIPb2rsp/CfE4/XEzfmZs+oz2VpLPPaPICQgWA73JZMDAOM8kd68t0G6lufFd+PsxjaSwkTZMSpHAyefpXpuqakunabPc6hGUgiZN7qdx+6OwHPJrzPSI7m28bSxAecfsco+ZsFUwep7mu2k7xkjzJqzTNTUJJ/NMht+BcWZwG6jcvb65rzHXJHL2haM4W3Veue7V6jqMszon7jkT2ZGH6kMMD9TXl+uSSs1pvhMf+jqVBbqOef1NbYczqnMzJiY9iauid1iTbMxKjGQSOe1QSAtuI4I96SFxuGSTu689K9DdHm21Y9r27hYj7VK/HH7w8frTxqV75Q2X1yoYYP75sfzpgVtx3HIPIPqKgeKSNCcfKeAfWhNMiUbbHq/wg8XyW2ovo2qXLmG6+aJ55M7JeOMn+8P1Ar2qvka0leNvOiYllIPB6GvpbwP4mTxR4YgvCV+0R/urhB1Djv+I5/OpZtG9jo6KQHNLnNBQpORSUUCgBf4aAeKTOeh4opAKKSl5H/66SgBc8UmeKKXjFABmkpeKOnWmA5Cwf5AGPoTU5kuN2BGM5HUdenvUUZIkyo3H0z/APrqb7RMFz9mc5IX9Rz0rx8d/ER6GG+ArLJeFYSkS7lZCN2cHgj1pZpLhbKcvHgiGLbznncP8anX7QbeNjbgEsoxvJ6Z6cf5zUdxJL/Z8xdcHyoioHruFY0V76NKj905HwoZYtT8QIkeSupyE4HbB96Y93ILm1jRZ5EFtODvjO3qef1/D17VP4Pkn/tTxAVt/l/tOQ8tznB4xUa35W9tgY5mR7a5VP3ZC43AkKe5wM5/xrazu79v0I6IJGuE12J/s5KrNF0x18npj/PWuXmvp4VDR2xcNb2p2oOSFnOQOcdeMV1t9dsut2+2Jt/nQuPm4I8tgc+//wBauZm1NbOQAxEnyICnH3gtyzH9KIobZ57qcskibtq42rtwPzrmJWBjcHg4PbvXU6pKVtUCx/w85PQ965iRgVfJxw3UfWvQp6HLPU+lNNkkN5bSW6ZSTSrYkN2GXx3HY1ptJOWAK53K/O3pwP8AarO024Zry3+yqsiDTYM7W6ZLmtNppw5BtscP8xbjoK8LH3dd2PUwy/doZcST+U/yLhkl6gZHzf71cn8SmnfwpeRyKvltPGGOB6A+p9BXX3EtwYSzQchZf4h/e+tcb8SpbtvC13F9m4M8TbwwPYcdc5/CuakvfR0Lc5TwTBcRSaqtrAu9bcgK7dVIztPze/WuxuJ7uO3gm8h1eS1t1IdeOZB05H54/OuU8DTXB1PUkMOXNopIxjjA966u8mmCw7beWPFjblRIRtIEi9PXqfzH4+hUvd/I5o9ChqlxclWZoMAveYA5OTGSe/8AXvXHeJry6kmlWS38v93GgG3oPs4A7+hzXW6tc3eTGLVijNeMMnvsx61y/iS7lea4MkDBngiBHXH+jEZ/z+tOgtSKuxzGkPKfEWnAIf8Aj6i445+cepr6VPJ9foa+adMeRtdsBtxuuox16fOK+lifmOOea9yOx5c+g4/X9aQUEmqWtapFo+j3N/PgpAhbG7GT2H4kihuyuyYxcpKMd2ef/GDxW2l6bFpNlLi5uBulCnkL2B9upx9PXnz7who4RTfXCkyZAiLH1PLf0rLnuLvxZ4lkuZmYmVidx5wOpb/PsK7u3iWBEhjGEjChR6YNeTjKzS5Vu/yPtcqwivzdI/i+rDG1c5PCZ4PtUo5kx0JPb/e/+vSc+WcDPy8/lShSZuOPm6/8CryD6QSRQM7efl4P4Gn46fX+tMcZTuTtGQT/ALNSsTv9enH40xEJGF6+nf8A2TS9R1xz657ilYZXPTgH6cUhBBPOfmJ+nIoA73wM8o0aRY49wMvUtjnA7V0qST+ecwZGAc7xknYK5jwJLJ/ZcqIgfbMCSWx1AxXUCWYzDdCBgDGJP9gcGuqn8J8Tj9MTP1OV8cTSt4UniktnHnzQRnDA5JK+n0rjIZLqD4iXp8pZCtrMMB+gwTyfrXX+MJZ57jSLMw/63UYm+WT7wVQcH865XTmlfx9rLKqnZazKMt93kV1Unbm9DhqL3Yly/luxCfLtSSLm0wokGTgjA/HNeW65Kzy2ZEW3FrGuC3XAxmvUrm5uRLzaDb9ptPn83oQy449/8a8v1yV3ksgUAIt179eTXXh9znq7HOpLm4ZW6sSOvSklG18bjt/rVeRiJ3/3qtnzJ4CApJGPeu7ZnnSXYRWaSPBOXT37VKrqyEPlt3BBNVozIsmTu4+9UzgK2c4VjkA0WQlqiGWMxE7BlCe/Sus8AeKJvDviaJmndbK4PlTR5yCD0OM9jg/nXPxFXjCYx65FQXETD7hztPHvT8iVeJ9MaV4jjubOWS5lWLy9y7lGQCuOv51paPffbbV3ZwQHODjp3wfzrx/wBrcuo6TcWk8jSzovlRRqwG8sRgkn2U89q7qTU20C3js1bzJUAefc3bsoHHHf61zylyK8mbJ3OwkvraJiskyKR2zRNcxx7cyoATzuYdP84rl7bxdFfW8mLaOXaBu3NwRzz+FZba0d0cP8GcjnBIz0/A4/SsniEnZDtZXO4svOJdpmZgT8pLZGPb/9VXD7VVtruKW3RhInTkdMVYz09+ldMbW0EKfeoLq8gs4xJcuEVm2gkdT6Vz+r+MLfTtS+yqnmNECX+fbjt074yT+FYF54tbVniWLhFfdhOCw6Hn9f/wBdZyqqK0DQ9BjuoZWwki5xkrnBH1FPWRGJCurEdcHOK8ysNYvproozq/mRtMwJzgL6D8D+dehaVafY7FVY5ZzuJPXnoD71cJOQrou0Zz1pM0uasZJG+19wUtweKnS5YyKptpMDBJxwP8arxuySBlUt2IHb3q2txKVH7g4+pyent615OMt7T5HoYfSA1JpTsQQNtVlOTnpj6VSvrmRbOUmynm2wI+2FiCcOMccZz6VeF06CHMJ6r1J4+U+3+c1XuJPtFpMpjdR5CfdYg/fHQ461jR+NGk/hZyXgi+uJdW1xxYzQhtTY+XICGTIbgjsa0prk7bciJzElrdj5kIA/T8ao+Frp7bXtbaSSSYyak0fzg4LAHBOAcE8j0q61/N/Z8KFXkPk3O9SOM7c46c8c/wCednpJ/wBdDPoik90LXxArzoUTzYMOeAf3Z454yc49656e6iS1zLbFZY4oRuI3EAXDlj0+ldRdHF8lwtuzZu4AVD8cRemOmf8AJrnr7UVgjU3EOCIoPl5Of38me3160R0Q5XPNdZLtEmxCQF5+veuXlIMbDvtI5/Guv1a4zAmyMHMa9CeuOe3+c1yUjq0EhPysQcbvX0r0IHNM948C3E0Uk4aIuGtrcrgkkD94OevpXWTXk48wrbEYVsbs+3oK5TwNewSzTNa+ZN/o0W4E8oAWxjA6ckV1X2udy4a1IDbx36YHJ44+lfPY1Wqux6mHd6aG3l5cJx9mLb0mGQGOD78Vz3jKa5n8N3HnRIgaeL5gD0+UDr35rp5bmVoZM2xJHm4wTzXO+NZWbw9cRvCQfOhJ5PHI61y30Oyn8aOJ8Jy3H9uagVHmK+nglip4yikd/wBa6eeWV9OgeO2lKrZRH96p2geauDn65/LvXN+ELmVPEd3GsJZv7NVSMnJ2qgrolluEsYpPImVX02Ldu6f60YwMf5969OdrfJHGt/mylrF1c8p5QYEXucg8kx+mc9/8iuX8SajcMZGaIAvFCACpOV+zuuevBw1dTqepXJvdkens5aS7UOeFY7SNv1xXKa9fDyiVhZd0UJ3k5AzbMvaqorVXRnV2ZzGmST/8JBpwjXj7VF1/3xx1r6YPPqfxr5w8PszeKdLSSIhGvId2Dn+MV9HHnrnP1r3I7HlT3JER3OEBY9cAZrxzxrrd54mtL23RpbexhieZIlGCyqMAvznJznHYe9ewf8CbPbgis2+sbe70HUzKu4CyeTYW6HAxnv3rOp8N30OrCz5ZqKWr0v2PEfD2lf2daGScYmlBzjqq4BA9vWt5D8xx3I/nUeAobOeh/kKenLe4I5/E18zVm6k3Jn6VSpRpQUIbITduU4PO3j8qlVh5p57/ANaj42YHQr3+lSYG84OQD+XNZ6lsTfweR0AP/fNOMnBzw2fX/aqInOQT2B5+lPK5OT0z6/7VNAIdhwM8bR1Pt0ofALbWwuT+PIprrleeTjn8jSMPnPJzk5/MUCO78AlvsdyIwp/eryxI7fjXWN53m/cT7p6Mf7g9q5D4fPKLW6VUUr5i/OWxz6V15MwcnYMMmeXx/APaumn8J8ZmOmJmcV4nmmPjXw9DsQjzWfbv6nYOa5jQxdyeKPEs6hHdUnQAvgH5vX8P1re1ySW4+KekwrGytFCJFy3BGDnn8QPwrC8OTXCz6/cJAsm+WcSM0u3A556HNddPSMmcVb7C/rqX2e7mtdzW4idr20G0PnGCD+PQfnXleuPKZLTMYAW2QJ/tDB5/nXrEs8sYIEO4LfWfy+Zy33eBx715Xr7OJrT5ML9mTA3Z7GurDXuc9RaHHyEtdMGOMsau2N9LYSA7FkjI5Dn/AOvUQXdJLkdXPGajcLuOBj+td176EOjF+8dJ52mXMImWSJHI+ZDgf1pkb2Dfu2MYQt1yM/WsJIxuG5etJJCo3H3x1rLk8wdKJ0QSzikOxopcZ53dRVtrfT7hkZFReMMS2O/+FckkYLHk8e9TRoSnLNg9s0OEu5DopnZ6JdR6HqqXenyGF/unJyGFdRd3yaxi4hctcADHIAPtXnWhQ7tSx5ZnAQnyyMg9PXI712mkQIZiEs1xjB2EAKT6471zV1yq99TOaivdNJFubWFt0iRCNCoyuc8n+g/WqAJnvIw+8SHBKHnZkDj6dPzqKxu51mlkuVV4ucbjgD069O5rTNypkAi+Z9uQ4X7+R/nmuS8qbtuZaOOhdhupYLwojyKwJZWJ649O3f8AQ1qSeKZpNK8uWQo0fBkByXPHP5kdK4hrq/tpv9GLTb8g/Nxk549zW3bxqlskc0e3cmWzgHb70PnprfcadyK+uTO32lpP9KlcExsQWb346d+OeaQ27wIA88cfy8MV+6MnJP8AnvVKO1K37TFgiEk4DEnjB9evI5roNK8Ja14k2vaadN9lfnz7gbFI9cnk9+ma2d5WSZKTeyMldSS3myl4SwJU+UvGe/I7GtuDxBdQxI8F2xAC7RuyAR1BH9O1Tt8H/EaXTSCC2dBkKFlAJGevPfn9Pzmk+HHiaGONV0xGYk52TIMenfrWji0uWLLjB7s1tJ8UQmEpqEwLl8qwJ5BPp+Natxq6Q2/mFVZT90iQHNcWngLxejxk6XIcsM4lTge/zZq3c+FfFEsY36ZIxxjKOmT2x19q0jOpFWepShc6fR9fW9u0iKbZGJwGBGRzz+ldEl02wER4Oe7fT2rgdA0nW9N8S2l1qlrcQRbGVjJnaDg4GegJr0EXaqpwG6Ajkc/rXDiG3O7OylG0SNbpvMjUQlvu8gn0Pt7YqK4n/wBEuHcEBYY2IwSfvZ9PSpRdjdEoiYZwDlh/dPvUU8/m2UzIuAYk5yMZ3AY61NH4hz+E5jwpNMfEPiBEiUKupu27cR1B46f5/Grst7ttosOzYjuUxsxjgn/H8D+dbwvd7fFXiErE6/8AExPy9SAVP9RVwapFKkEGVLIlwBHsIxjr174/zjrp1f8AXQlPZhNcv9ogDQMSbqHGTyP3Zriry8zMDPbhiLaE9Cd2Llj9D3HNdzdaoseqQsFZ0+1R45HI8rr1+tcVd3sI8kyo6j7LCNvA/wCXlifrxThtYHqefavOBH+7iOAi5znrxmuRuSCrDthia7HWbuN9qonVB/Pv79K5KYoyykkZwxAJrvgc0tj1/wCFd3FEL020EjN5EQAyeeXx0BxzXozTyeYRJDtPzEjLE8qPavPvhVcGKa9haJmkeKHlDkBRu5/H0r0a4uDtbEUg4YDjr8v/ANevn8Z/Fbsenhv4aIJp5BGcQsS3mckEf0rB8ZzSNoF2pi2hpIl3Eng5HJ4roprzhh5L7f3hzg8nArmfGl1/xTVyZUKL5kRLN0HQ81ydNjsh8aOR8LTv/wAJfdlItgbTVOEUt1SM5roDdzyaZAFEzL9ijZi+ThfNXjOOcDP51geGJnXxnMixs5/s1U3c84VMZ/Sty11cy2NsFSY7rJR+8BDL+9HbJ7A/56+m9tui/I49pfNkF5fzfbImNnIIVuroAh87sp19R39a47Xr9mt4YfIYMLaEb2B5/dNg/wDj36V2+o6m0d5bKYH2/aJ8seufLHGPcEmuM8Q36YXzIZFH2SEBivfyGAP0yc1VDSWxNV+6YHh6Vj4q0rEZb/TYhjpn5xX0dnP/ANY183aJOU8S6Y2xs/bIiD/wMV9I/TJ/GvcjseXLc0p9HnjBaJhKB2Bwazb+Jrbw/rXmRbCbNwCy4zmuz8s/wnI+tZPiiLd4T1QdM2r8np0rmlUbi0zpoRXtovzR4DtypyRyuf0pFwM+5H86kBwGOMfL/SmqfnJPQf4184fpqI8HaQODgfyH+NSDcGJP97HXrzTd2AcYBwMH8BUmRtxyTu7/AFoAhxmNiT/Dxz/s1Ns6c8Bun40zblSCP4fXr8tTFs8A9D079aCWxm35VwR0GfyNEicZHXPAPpkU9iPK5GQVH/oP/wBehx/EeeTjnpyOtMVzrfAgnFvdeSUCmRM578GuvBu2b/ln90Dv/c//AFVyXgZJxDcGBhtMihsnrxXWo14W+YpgqMc9PlHtXRDY+OzD/eZHDTLdzfFS4nCoWt9PhUA8DLMD/jXNeEDeLY64yeVvJmyGJIPr/OurAvI/Eut3EISR4orUIHOAcKSBnn37VzHg1ruXTNTmXBDefk9eqg9K66crwk/Q4ay9+K/rY0JftzWrriLzvt1mQQeB0wPb1ry3xAZWltHcBQbZcADr1H9K9SuDqSzTM0SSIbu0IZXxzgADH4V5l4hluZWsllg27bRAnPVRu5/nXVhnqYVdjloxl5QTzvPemuCuQaFJ82bP97pmnM2WGevHU13FrYYjEHjt15odiWPPGfWnIQCxPOTSOwJIGMnFAuhLGCGxnjHrRGcD6n/P86dG2c49PzoRlMZ55OMHNAHQ+D544tZdp8YMDAEtgdV6/wD1q643IluQkO1VbOW3dgDj6iuI8NhF1B2mTenksvXociu00fwj4h8QbzpenTGLljO48uMHpjc2AQK5KlJTk2zjrp81hkkhd1R9xgVsE8ANgcZ9aWWe7EKC2i+VgEDdNnGM5/z6V0lh4S0nQrhZfEuvRXO0DFrpjGR3OejN91Rn/wDX669z44s7CGSLwto0Fk2MfapsSSnHHv8AzNctSdKDXM07HXh8sxWIXuxaXcx9H8KeIdSQeRYlIioIkkQLG2RyxJA4/wA81py+G9I0pM+IPEga4BUNbaevmtj03HgdfSsG/wBf1fU2Zb/Ubm4QuCEeQ7Rx6Dis/aQRn+8ABXDLFwT91Hu0eHorWrL7jqV8V6Zpa7PD+hW6bQNtxf8A76UHjnrgfhWRqPibWNUkZr3Up5cBsDeVUfgDis5EJ5BH3R1Pv/8AXra8L6nDoWuG6urMXceyRPLOMjOPWsfbzqO05WR7MMHh8NBulBNr+t2GkeMdc0iX/RL+RkB/1cp3oeM9CfWu30j4uq7Rxaxp+3OA0tu2ccddp/xrzrVLhdQ1a5u4LcQJNKziNeQgI6VDHbPJIgReTjv3xUxxE6b0YVsFhcRG9SKT/rsfQel+KNG1hF/s/UInkYZERba4/wCAnmtXAbhsGvmKEOcbOMbSCD781v6V4v1/Sii2d9Myf885SZFHPTB6fhXZTx62mjxMRkltaU/vPdr/ABHYyMWwFGT7Vgi6j2Mu1uD7dfzrE0r4lDUmaz1CxMUjLtEkTZXPuDyP1q8+tWysrHO3cN2MHqOB165qqtanOzizyfYVKT5ZosPfJvjKqx2lWKDGSNvpnpUF3eH7PMdrDEcRI4O4A+maZ/bsZWMKcqDg8ZyduD39/wCdVLvWY5rW5WOQ/Iib1Ixgg/1opzipEyjJrYz/AA1exjXtf2h3ZtTbPIJK7Tjv61OdSJt7dwQxVblmjUfMMqeOvqf85qhp4vrbxVf3hilWO4m37SuN4I649cjH51ML2cLGGjHk7JlUqASWYHPHbqBmh4mnzXv/AFYcaE7bFjUL6L7dF5kJAF5CvzgcgxHjAPvXIzX0DSL5se6QWsGY2xkn7SSR154NdRezTiXJQBjdpIGGDhVTH+cVkG3ma1uJXgBJiQRs64I/ebs5796z+uUY7spYeb6Hnl+0cuPKiaQLGGOwg5J7detcc9s80cv7sk5bqOM817RDpkkNtLbwrBMm/wCdAgZWXHOQR9Px57VUh8OJamSCeJVmmVtyhTtVSORx3549aFm1KNw+ptrct/DVF02OdZ4ys8kUQJz/AL3UH3rtJNSRoHPluj4bCcEk7en61is0iNczFZrq4aAAFACUAOAQPvHqOf09bdu1zcIhyBcBV85CMGIEryRnANeRUxsKsvaP1OunR5IqJek1GMr0PO9Vyy+g965jxhNNeaLPBDGzh2RsjB4GOcc8f41elswLtLaNgbdBgy7vmI53D6YHX2qW6EcUTW8k8bAYd1JDZB+7jp2yK5njYqWhvCNnc4rQBc6f4iknaAmMWMcLMOjMqKMD05UD8a6KGeSG1Od0qJCqcnLD5wf/ANfHb87kFo8EDPM4MbfuyCc/O2MdBkc9R71NMqJdObdlfzgqRSCMHGAQQ3sCB+P67SzJt6dP0M3RRjXswgUedE5VLh5kYkEEbCuPbJP+e/NapZSXyW8dvaSPIYIlBABCssZQ/gM5NdhdWcf2OQHyt6qmG3cBT8vJGeOnNXbS3to7eBJIyC8aZiR9yqDkkevI9u1ZrNVThzbhKjFnn1t4UuLfXLWUZVbYI4Zl+UsDnPv0/lXqVxfx2pUT+YN43Lt5yPXr6/yrHiuo300qZ5GKNlkjkBO4FjtxnnjAPFLqup2ttFbPJccTBm3O+0swOD3Ht0//AF9NLO6yly23MpYSnJ3NVfiRcR+G9R1C6skke0VCqo5TzCzbQOc4PNR2Pje+8UeGb6S6sUs42sZW8pX3E54BJP16e9Z0mlieN7cYQSSAspYFVIOQM+uPxq4IRDFcwbkI8vyNqDBC7+mD1wM49c5rqjm0XBXfzHLDwVTmijhJLby7Zn3B/l6Z9qjFtIoJKEhhnrjv3rsVt7Zvs8XlyYdvm3cBWxkAE9efzzTZNIhW3lcbiJIyvl5GS4+734z0H0rz1jItHvLMGlscWIS8fPHy96nSAu4YAgE45z611i6VZyW6tcMyq/zBQQNq885yP8iiDR4FhjeZtwDkrtP3wee386X16HLcv6/pscgYW2luRxzx7CrSWcjwl9rYD4JA4A3dSa6SCxi2kqAvlOAZOgbnkY7fj65+ujBD5IeMRMwZwFWLHB5Pfoe31H55zxqTMpY+fRHELaStLseMruQFVPptzSy2jrckbT5Yycg+h/8ArV2CWNmi3EypteIYMajIUfXA69qhazgmh2K4jYIWHmxnIBwRkY9OeP8AGtXjLMTx03shPCEk1vp8rkrGPMHB9en4ityLUmuPMKyJsCnnGCQE69PUfrVDbCrZASKGRg0aIOQQO+Dzgj/OaikNrG6o0iD7RDshDHOJBznAz6H3/rosfG1keVWj7Wbm+pUtZ7oyapc5jCSTxLvJ6bU54x7jn/JyNEsrjTNHaJDH8ySmQnjcSqj/ACa6HasMaRlSi+YHeN2yF+Q/N6EjGe/UfjBc3DvbTTxrvm3lI+Sc4J6jqcfL09elKOYNKyWjJlRUncxZDcXUOEIG6WAjA5BVTj14yelchfaBc3CabcvFn7NZlGD/AMRG7aP/AB79K9ISAo0JQNHcttmkiDEZ5BwP1Aye/WmhonvZo5VijC5yYxkpwepPBOQcZ9BWizOUNkS8PFniEPhGZLa5uL4TRt5qqsaJliCucexOR/8AXq7D4JkggaQxtP5MX2iXCZwwPypn0459c/n7LBCkrhFiVo1j/fyH+IleO+M/rUIjjuoGEiusK8bBxlOoP0xnB/x52/tipKN0rXF7CHQ8W/4Q+eezgltUBOHV2HO5+MZAPHJP5VLrXg57KRbOJ/NbzRGuyMbSckDDdSWxn2r1vTrS2tNRa0jV1nRtwVQuMdSGOcZOcd/51dlt1ZkSG22Sw7njaZVKqWbAIbIz8vTGKbzeopJvYPYwPK73wJNb2sGnxKwladiRsLFhyACfw/8AHqq3HgtvLt0TzVbGwI64bcSOCM+5PrXsYjE1ujsJI0cHdchlcouQByOgJPbj+sstqiJNujVUMhDNuUhMLnqTkj5TwPx983m1WLSaK9jFnC+DNHbwvqv26LTYtRMcIzDdMPkY4y4IBGQCe3+NdVeeLdQ1hFF/p0/2cA7lh1BgMYz0WMA+nNXfsMTP5txHJFE6gYKhiA2MnA75xVa3JMKQgOhRXO2E7md8E4xjtx/Kp/tSq076lKlCLulqcvaaJc3epTmMRx2/kiSGGTJCqueC3GSSPQeldZaeHdDvJJUuI/s7LiKELeZEmSc/w5rQBtJ1mjAWJV2yS7xkY+983PPTJHqKgs4oUs2ktZAqpKxdzFlmx2xngDB56ZyKz/tLmjfkNOetvzsiu/DujWUrhYNyRkA/6QfmO3qTjj+X8qG0bQWjllW3xJE43oZWO08g9e3Gc+hq5BNi68tWzLNM0r5BG0YAJ/Mnp3qc2yW8KxybZZgpO4nG7POCPxHH+Ncf9o8rb5dP8x81RrWb+8yZtI0ZFHlwKpkyV/fE7cEd+59BUkOh6bLIWMXRWVmMxXdwCcH8cUNeZtYTay74nt2BcdOoHAJyNxBGfepft08EU0l75amNN4VThT93r27kfjXLLMaiTfKtW7d9y1Kb2k/vIU8NWKQzHygu0DALscsffnjgkZptvpVpFeQtHbH90D5pVjlj2IB980271i106N7iSRwZWCoDubzeM/TOAxH1qO/1ho9LeUxGERN5sqhjuaPLKSo64yQxPvWdTEV6qWn6Euo07N3HnTdLjmEkqqzhCGQPkIOiAD8D35/WpYrKwkAkktPLLKD5Zc5c8fdGecg/hzWDqk0cGqySSy28arp5YwN99nByqj143L7EZrOvPEGoGSe9+0tI0USzxxxoAipkjA5OQeO2Tj89I0681dS0f9aEfWG9GdjHp9nEzTJEpe3kwQgwRk7jxnnAJ59iamd44p1aSTzRET5iZxgjgeueePxxWPb6lC1iNTifeGHRn2o77R5jMTj7oyPcnFL/AGgkaw6gshkiVZCFkkBKBvmVgOqnrwcfSsOatFW7fmaKUW7s2Y40zI8mx1kQbE44+bgde/I79aiXHlCVQjorZk+fomGOeevt+PPrkX1+11bzGO8mhtWViu4AEkAdV9O+QT/jXb7RFpUhsJJoZfJSTcWwsjBlbd3ONrEcdRmtOerKKblqJtRV0dZDFFLM0EN9FlQAu88kqMHaQeTz0x+eaiacWzxq5MaspCSRnJL4JweOmcfpWBpluBZqNLvXYxSfvGO2QzgElj1z8xzj0GTU9/qBtIlRHaMLGZXbPyjO1QN3bnPtnmueXOqijB6hpa7L5uLtLoQeT9m3EHEhxgHdlmOfY0i6q7SXCXaxNGGwkUgO5+Mn68kgfTp3rlrrUtVa4HnxrHPd3EkXlxqBtUgGNs5xz85z6GrMd3a31m975PmOYpFimL7Hi2yEAtzhvmyeAc10wozjaT2emncXMtUzb0+7jOmx3VpFGkjoDKkrMeRwRnPXvn/GrkckVxJKpMazKo2IW3YJGSSPxP8Ak1iwidp7a0H7xpAZX8uTILZGVBJ4OAxwefl4zmqd3cTLrsj+a32adtgeUn5xtX7x7jfxjgdK5pUOeTinbdi5rK7N1BEJrdJY5bvCoilYtvyZJLHJ9QPf61NNdPYs8vmCeWaQQhmcE/MQBgYIGPcd65aSZ7qYfat1qBPM7ztIyGOFSNq88A5YZ7nnkZ50jLdLfSW8titxaBg0UxXzNmAGDHPHfG4g8it1TcWrsHJMnF491ryNLEGE0Qjclh++wxAJA4AwOvbPvis1Gj1PxVpyR+S6i1zmM5Tklgpz8xwV79cjHXmzBcWF1rEEds0KXN1ln3DDA+USN/0yW9+PxyIbe50LxNYmRZ7yaRyGMMgOxcZQseoGCcgjH6Z0jFtN7Ozt+InOx0mtyTCObywbhreWN2RVy0zBGIGPUkL+ZqrrV7JY2cN5GywOjQszBOCzvzx7ZX61nXmrrp2mO88snl3ADSTRsN0hwcphuB1I6n09MpfTSmKO71QiJJJxGsbOuwxsB19DksQfZPxyhQlHl5tdfv8AIpy7EWr68mkaNbzWqgXcjO8cjSZUwq2C2O+SQuDkAknHSrS6hdQ2ME1kyzTtbG4eZlwrxHAHTn5ctkZyOfWqOr6QNRSzgJWIQyrBBAoO6WHJLkEdjjPfkDvmqWnIuqSxyWDR2ltYjypkuXaMLJ944PK4Yjr3z7V1+zpuCv0d3f8AAyTlzFiXWJ9N1b7NbK9y2POZFbIZ5MF1GRkgjB4xyT0qS6gv1dUG6+wCQske4QDcwCDHpt7+n4nKGtt/b6iCyVpy8jSzvksXOVRB2C5bHHUmupgJ8PWotru3uJmaRybhLjyhK3GSAzgkZ6dfUda1lH2bWmpEeaS0Nq0u2vpLUyu0EzOzNICCrY3bR79P1qD+1ZZXl3mMW+RGIxH8zE/eLZPQDI//AF01/KubyC3tIma1SAMGVSAXJHfHTk5+tJNAxtZIIIpN3mx/6ubqFBLLjpn69/pXK6VOTSfyOi5ctpI54RHMgUrIIAol+WTA/hPQdcdecH8SS7ha5e2gibcZG3l22hQMjOT35PHPTP1o28iW1iYI5FibcXdGbcscityBn1456cD1OYNPZxfLNJE88QkLlptp24PysTk4J59unaiVJXbQXsi1fQGxjjhusiSReZIcncoxwOfQkc9qttfrFbpCnkybSrhB93bxtU9fzqjdSTf2lEuHVJ4yjyM5Hl7T82SPqD7AGoJWt7R2WzRpHVkycKGKELknj0IGPXtWcafuptjvfQvy6oXuILc7nBcFlkQBlGCd+B0AH55prXslzBcu90/mh3kUxqP3WDlc5P54z/jn226dGuJQnmyLI2I4zuKdhxzkVALryJL+G+SZ1W0BMsZCsCgwE255zvHIqvZrmvYV+5dl1C5hhjgvYxLFdf6sklsqFzhuRge/sB9UuXu7OaBmmE0rlXkkK4TZtKgdegGDnvgetVpJ717VZhepGJNkwdi2BHjBwD2GSOOOKzV1FNQW68u+JjtZ2ZljbdvjZiFQH154+tb8svl1IclFHR20uY0kuVx5cbAxK4GI1GACevORn15PNUbS1M15FbLHma1Vk85/mDKeSMHjOMjJ+tWBdG2FvbWAEy7Aru+G3BW2nOc9cY4z1Ge9OttRsrV2jWRoV+eUFm+VTtKfMep5DEA/4ZxU3ytx/rcrdFh73T9KukuLqRYti+SHjBkILEHAX3wnJHTB9ap3cE1jdKzOiQuvlRSh/l3OzA7lPOSSDxx04wKr3OoKNN1F4pWCwTCMrkKWVWAY89enUZ5NLKZIRHK96rBLfO1ufMcPvDckcbVC9eSfzIuX9en4CfkaDfubq2JeMXUQG+VW5RTgKCT9M9BjpUpvBK9vcWEccUcoSQySN1ZgTz9eRgDrXOxXMl7ePPJGoSbLzzs4xEDwoKdODz7ck9edGOYxvbNbJlEidI7fAbG3DquOxxntweOtFTmiir6lto447+BIpkjWRwGZXyOI/wCIHrgBjjjkio2urDUb+50i3cTFWRpSsmVdSuVBbuo6YHr+dax+0yxXHmyIBLLvXzH/ANXEdwb5uR2AB7c9+uXolzZaUzaM9xNctF8t1JtIxyy/KM55LA49ASc0csrS7q1rfmS32Ooi1KBdQu4hCpniCoh8slZCGIHU/wB7PHWorfU4P7FhaVv3sjrF5Mbfc3P37jJzx6ViXd4kkslzkPaWcPkwKM7ZZHGAc+mSeT2xyO9WO1ie2NxBI7PIxnMxY7T82QR0IwMknp9aJU1KPveQovY7G0imv3EUyeWzRMs299uNrYUDHPc+3WqtraQTeJrySclImtjHLGwJQvgDOSeR1BrmbaeaZ7V7aOcWvZYZjvbJ34wOSOo5HX6muhWcXaXd7GZYVgO1o1B5YKXLZHCkknr1AA71b5oOwJpleWHU9GhtSt7CoEaf6QsTO5UAtGrc856Djv3qzLdwNHCsEptLk3IQuRy7YDkAZOM5HP8AjXADUbq7kSZmuL23fcrGR2RCu/hiueF2hx+A/Hr1hU+H47eFfstyUVYkc/vJSWGXXn+51+uMcVpUo8urf9eZMZF2GWIQzybkSONmklYgkyFDnHynp8xGO+PrnDWCG8lvpbS5XLu6orfJkhjJsUZOTh/w2kc81eeRtGVLW4bzTdHbE0QJTerAOCo4OemcgHPr1S1uF/4SaxhaMK9tLIfkdB5aMMKWyck5+uce2ay1hBtdvy/4OhSs3qascsVtLFd6hKzzKytuyBsH8XGcBcZbnrXPR6pCniN5Y7hna6mI82N8Fd2CoJAwSoAyP8nSiiI1WWC0zIl8/lMDKoxEoA+VScnGecZ/Osyfw5FbP58VzGivfRQJGkWVfLEksDgjGfvKTkd8VnRp0knGe7X9IqUn0LmlXLT6iYZ42AjM/lKyn7iOcEnPQY6+g/OSXU7jVbqa1SXdHpy+ZPMATkFcrgDqwzwMk81HqK3flaWNOkKyW19J9pdiQqoA2SfXhh+LACqLalFc3VqsEssEdtdM80IVjncoAdsfeP16bhTVJTlzpf8AA1f59DNNpMXTb4anJ9o1MRs1qm1Rv+6NhGcjoxHWqcOqx6k93NHLIkthYonCkMcfK+QckjJHA659s1N/ZV6mvuz/ACxsyGEKd+8KAJG2rwM8kcgnd7VRvbW20x7O40tLsTzTvBeTRHHO9W2hgfTIz9K7Eqalyx62t5df+AYcsr3ZmR3T34vdKuLL7TqFkrE3RJBWIcqF9NxPJOSck1bmv7i/uI1tmVUezU28cqLhIxnI4PzMDnI9c++bOtW9rqM0MkeotZMsAjne4yYyA+VEjDkf6wAdR06d32GlWtpNdDVzIbKaCNrmW2wwEvzHzo9vb7vI+7jng1upQcea1vL+v0HCEk2kXCURI7S8mSWz8iNdoT5zDJgICCP4nJLHrgAD3swbdUu20zUpSCgFzAY4tq3GFKIpwfl5Zgaisbuz1swXup/ZJJZIpIYQFJffGoG48dxztXrnjk8yXOn3Go6VHb2UKR3nnq0Eu3aXXllxnlQPun8fXnlnHleq/wCB5m0VaIy7uLiO3aSUIPPkkW7mkQkDKhVJAPHPGPoe9XtQguZLO1j05S5W0+eILlFUDjJznjdjA5OR9KoWNpKYfJuoJTLeXyw3EMkh81duFDblz0KMTnqOfrp6jdfYplW0KRliXljUhQ6dccHjGMg98HqKynG0ko/8D+v+AX9gx9KFxonib964trcSDzED/MdxGC5I7fN+BPqCevvrKCe2uAt1iOWN1AkAVQrEkE+pwcH3H54kViuqahBeGIwz3Rd3JVG3qrhQuc9Nq5B9yfqy7aOWOGUyeZbxzJKoeNjk7nVTkdcMVOO+R0rHEU3OcZvR6XHFO2hmagTayLbzRmNrEL5cmd37sRPjDjgjLdMcYNS+HbCS98J6Z842NEQjPISBl925lxnkg/nWdrt/NJoOpXMMv7u4MYVgOAQW3Dnp24x6c1o6M19ZSWcNxEZY1QCeOJ9xQZdAPbaVUADgkV6s6cvq8UrXvf7kYRtzu5oXzTRQ6deRN5U1t++3yDgKpAHyj1yR3P8AXN1aWNob9L9pHis23rIvy/LlTGoGMEk/KcsD8ue+DoXd7Fb6ekuoyhLVYhi2j+YbmYkAEfxZb8MVLNorvqCxQma4uZsSwwyMp8uTaWbd3wCFPP68VyQSTT/rzNXHSxRZ311bf+1Z4Y3ilVYrd22rlwAoIz0OVPJycY56jVMV/aSX0KyySOT5e2La5ZQ4wGJ9cHHTg471h6fZxR3X9ozC2urkTfZ2coqxRMqZQqpOSc44GSB74rZtpZWhkhmupfkcPkcsW6s35kj8B+Oqo3so6Jf1oGiVivdEW6oqzxvdQWpxcyDHlbyqMpxySQW4PTPXAzVqXRH068j1CywLi/uwxYuSFjKKCuCfQOO/BzVvTzY3sUj3kqpOqh5Cy5UEfeOPUYPXvj8V0/VrHWGS4C/uoZt8azvndE6kHI9cMfyPpROk0l933iST0OTm8PrBY6vbzLGBMYo4/mYCNHkD7uTjblgMg9jmqMFpFc+JLVTPP5scjNdB0GEcKM4JAHUAY/EZ6ns72NPOvkjaFI2ZpXiuYjsAwCeD0GQx9yeayNEs9M0/xUbbUws1s0Yk+6Qu/aSAwJ55ZQOvNbRjKV03r/SBqKVzW1DWP7PXZJGs5s3uZbVo35iX58gr/Fzz2I/DnmdPIfQdYuY7m4WUSrHClzGreXLH/GcHkY3846E1rXPiW0uYVsTt3iF8uCDyRgkegIbOPasywvorGJ1vEMrMixLERjEYRiOfZiPzPrShRly676fgT7rZlaZZRQQ3N813FDNM0LRApvyVcEtzjA5OAck4967XSorjxHYySQh765iuH86ZhtVwVXaVBK8YHYdq443cflwO84MQlDzguMt12r1yQM9uma7BPFen6Jb2+nNE9u0EKhzHGCHbueo59ffNaTpyT5luVdcoN5Gn30TB1ZGjd44lbJCJlQQc/ewvB96rx/vlu5GdSTCyQw7SzHanLZz67hk9SO+a5u4nFpNBcQSNLAko8mVP3kiZboyn+9nd6DOOprVmvJrnXGt7e3ghht080MhwXJTcMnv8pzz3Pqa4JUnZWfT8iHUfNY07IJZ3d1eTucGU+XGzbwqk4wT3GcnHbp9a0t9LaILKwCqH3O4fG5iMseByCRnJ6HPvVJ7ifR7bT7CMAPFEGkCqXVnVG4yevzANg9PxqhJDeaol/cIkxSaONEADffVCcnHbcRxznmrpwk223oW522N+6ubuOZFvRHObi5UdAqoMDJzxnp9Mk1jTXdustyYmlMxePzFRlO8cNkEjIIwPY5FW724uJjp0n7sRSSRqplZSX3K+MNnC/cxknHzGsi/uLi0lN3Ifs8RdgqKAXDKwypPQlSozk96dGm+vUicnc0dH12JJHS1eXyTcZgIIDbXfdkk/x54ycjAqwfEKajbJZFT5F1K0aGRNzPt5OV/u9vfArLtbLTW8P332u48trYLG7YKsQoP7zHXbgrg/QCq2taTqEEcCJcosdvH5SiKPd5gcqAV54G1s+4yK09nTlPs/+ATedjan1f7fp0kVntbzt3+u+QIm35VXPbBAxz0OK5+GS3urGxgWZ4bydZmkiBCrHMuwICO67VHv71duIIdL1CKASiMzOytv6ozcdB6so/DPvWE8qSXsIENw8lqvmyeb8hKbcHJJx97fjkjHrmtqUF09fzFN8z1OpsNR87S/OuXjtJ7nyo4jGQAQGLFQPXLgZz3797EMcVzdTiG4KxAtDGmPmkZHVmJyfmPUj/ePXNNmto7yVbKyljihghS4sbj/AJ7YlYu+cYyASD/tY4x1TR9LlbxFY291cAfYrSS8DbiqruYKh55B2tnvz+dczimpzva2v+X9epeqsmTX0z/6T5cK+WwyNj7S4kbeSCOeFI69P54N/LfWsG9JJGgkLRyxPJuSRQ5IYjPTdjn0rsJLqy/st7eYxWSKv2eds5JZgHIGOu2MgZXv+uB4n1e6+1f2nHPDb+WDCBIjSReT/FkKpIK5xkDPNOhdS5bf1Yqcbo10heG0vVedJISIgsYkAB2/MQepxkjP196URzWV+muapc+baTlQu9SVtgwIygzkDd8vbhxWLJb/ANm29lHJeW7i6tlVHaFgAjhAXGRkghG4OMAr3rd1QXkUdtbTRrNp7xCSZ7c4YfI20qCc84zyeD+FYThKLS3T39Crmbr0X2WOD7DOI4bqQRTQS/uxt5YnOckgvkjvnHrmr9gjudUgmhjMcszop8o7DI3lnMmWz3LZxjkY9M09GuJta1a1ispbiFLd0LLdS4EithnZUPXAEvPOQw/G7HqMepyXEsmp2zLJI4ge0h2lixKhGYgHpyW7ZHPNdTjKC5fvFo9S/Jcyy6JLdW1oxght96xRsrmRdzqd2R0Zo/mxj1HUioJ/EEN7oxEzJbRWsqpHsk2mdVUDYc8NwD+IqppdrJ/wlcsOoR3SWttEIxKrhFkCKQck8FMPk47uayrj+0IbeOyjRZLZ7hoDKkfDZfBXJHGFbH155pKjFytfzEnY7Ow0x4L6SGGCFxdSyvCT82wfKTs59CT7gg5NVL7XCNci01DcCW+u1WS4a1bIO8YRT0bjGeCPoKr3MklteWkVrLFO28wtbmAFUHlqDKF5+XAHJ756jrYm8R/bPElhbWsbSwW12ZVLlifMYug2kdRnHHuay5FKV2r6XFqg8TnT9P1Gz1KWDymtBslEa7tzKVXZsHHJ5HbuRya2rzV3u9Dnkt4/Mu4JJSiM6kgtGGDbl4ACk8euB1rgfEWks2jeQLpftTXifaHt5crucg7sjOWBXHB7Cu4064/tfwuyzRTQWCkRTXkbFVKrHtIZxzwMkt6kDmtJU7U+/QrS9zP8TT2D2VrPrO5WSNgk9mDtBWU/MDu6lQpGeePamNaW0/nvp8cas7rLJcKm+TAKsuOflPQdedxHQ0280mOWzsdOuBO2kTSwi2LyqJLmNWYs3BBXcz8Z6A+9U9ds18NMfscQ+zNcRNgyDJjBAHCn2IA9MH6Nx97lvZ/gS2lqW7PTBc3Uxnl+zfZYppY4YV3Sb1Xksw6k4boOv4VS/tOWCcWMk0UNpHOojMhJYtHtYZwOrfNnIyT36g6VlqF9Z+IrltXkmjtLqFIrdBKR5wZMeYoBwCT3/DB5NZWkrqH9qtMkkEkQ81ZBcJ85lCltx255GRgkge3U0+VNa20L5lex0zIZbfyJ5nlSNopXwg5Uozhcnjqo/wBrJ65NZms6dHpUf253ktftEc0llGWw0caKAok/vNhg3r0FO1+6lj0KNLi5kSa5IEEhZTtLPg4B4/uDd9apaNfX+tabJp9/Ml/c292FmmkJKiMEhiR23LwMDt09c405QTk9v61LtZlyxaG+tr147pBImWiaVvmZVAA47KCCMZAxzz1qvM66n4dtpLaEX0FyjzXMJHlu5+794DGckgke2eatE2d/BKxWGK5uJU3qFChNiiMBx0AwxJH19KZBbwWumy6xaM94XcAC5BiVY1PyomeMFuoHrzVeykndd9PuBtdTJ8QR3A0230MQ7bYwQys0cJXzGSYoUznGBlWyfTjrXMR6hdeHdUnsJ4zeHzWje3ziF9pIIIHO1hyT34PNegX+oQiO0mSdilp8zA8gp97nPUnPHp71xl9apJCXmYTXEsfkyMrZYrjhV/ujr+JFdlCDjHlmv67mEmr3iyfQopILqCb7Z9mOnRiVLJSWeeSRiCgH8XyqM8EcdK201eGHVD5Ejs1hJG7RhAfMR1+Yqw64Dk4xngc8c4+kx/ZWvZ13+ZcxskMjSkiA44yTycBiMD1Jot762is4hCmyQlVlMhG7ap+ViOo+9gUVaam72HGaStc9EvbgJIrXMswjjkUDy8Dzs87iTn+HjoPrWHqfiC0vdL1GBkaGW4MIY7gTGMLnao685Hp165rkl1K9TUnJvfMXJMZ3/ezxswCc+mcccfU491JNNKJZwIoWTKsD1bbwO+c5PfHeilhVZXZEqumh6XouqWNlsmknVzDIzxwpgqFYDKlc8fd4HbPfuzX7iyi8O/YrR2UG0BYE5CTBm3DrnG4jPpgYry651CBLyK4tVeQMhZ2J6Sdj+HXHvWo9/PdD7RMeZEDEfw9fmwCT3rSeHu7hGpoXfEN4sHg+BQHCI6SFPMyrZTkDJPHGMH2qKXxlLqN089pH9luLyWKL5pD+LEngHk9sVQ1t21K1t4NryQCUyYQAfKvY44HQ9PWmWljmSRroRxMjKqIowYmY/wD1hXS4w9mk+lzLmlzOx1+p6rdarHDBqEZ+0hBGwTBwN5JPTk478dTUdxqkya5HdWmobI7eQtJGST5uHbC8deec/jXPzaheNcxSrKrQq4ZnKk5Ge2fp1rKvLwu0SxSO/TaGwFJ7e+OPU1gqCb1LdVo6+PWbUTXUodghmWRIeyDkFQPctnPt+ddfFZn1NXaIMqsqmLBOOByxzzySa5r99OoaDaWIC7Wf7v8ACOT1zkH+dXbeMCJ2l8sSBVVSuWIPIAx17HpV+zjFWEpPc6O+kFxC481lEobeqjk8c+/ORg+9Mtp2Nok/l/ZVUKCjcALyMjt1X/x73qBIL1YJppMy26YdWx0ct93dnOSMCiEiK1aSUsYmlUlZGOT8vQduv649sy+VqyLTvqXI9TuZbwK7srISEKjOV5HUnPoffiq+p6mhSW5uAAUizH83JYY46+mKrGOW+uHjgg2/JuRsfMx6568gcdOnSo5/D2q6vbR3C4CRoDJIGwEPBznkkds4J61PNTi05NINbWMq3nlQF3UDGSzE5BIwc+/A7e1MuL6aSz3yRl2ONgTk7QCGHH+fXNaa6FqZt1u4tps+rxuFyDjkKM5xz16c+1XL7SZR9nkWNpoJB5ZESkkNzld5AGQAO57561ftqV1qZvRXOftXf7LH5xVIhOZo0xzux69QMEcVsC6uZ3LiaIOQN5kVRk/U5z/n61JLNHCIZHR43UY2Im0Mw7DHfPOM+nNaFn4bkug5/s2SRshz0kI3DPJycfT+dFbEQirt2QK17IcbUy3ENrHJMIYVaISSoFkYheQwGQTtCkHjPTtzNcW15q04LTmJkTMEpwME7FOOem3se/I6UxNFmvL1ra7u2NrazvP5iA7pGCDB4/2n7Zz9a2r0wtKHdwIIY38rjaR5nzZ2jochcD0rmVLU30EuP9Lvm2+W0FvCzKZRtJYhgW+pzgY9B+Ne5uIo2s4nV1lId4mOMR7eMnvkA8f/AKqmkmt3X7Q+x3wwJQ7MLkMemT/+s0zUNRgdWinuSskqKGVcAEZ7nsB6D+dEaPKrA2tzBuYrpNHiitrj7RNMyxK5cFHOSpPcDjZn3HrWnptkJLW0h1BxDLdRRyvBCq7Y0DKqgbvbbnPXJzUEusxWktm1ssUzLMWcSHjB685HPzE/55S78R2kF1KkfmNKwURgAEKcHqenG70/TOa9k3o0JyW5Hc2ltrEzW9o0k/nu7zyRqFMwO1gF64U/LjOeO1bNrplldQebqUsouI1X94JflOOFGATjGO/Gax9EvEsdQg5ARwpiEigAqV29MY6Y+pxU/wBpiWdoo4vNDAYw/AweBk+nX8aqNPk0E3zbC6tp1vCZDHB9pdredhLkcMwZiQDwc9BkdGGOawfC9/cXmrCR4k/0+xNvIwcEW64cg7R90fKT+PatOe4fy5kilJkfcjLGMr5R559wApH0qvocX2C7efJiup49rttyWBGM/Xbx6UnFOMkw6plq3u4N2lT2c80O8BmQAhWiJLABiP4mY47Y+lWrO8lvvG+rabYGBYriwKATIciJRjapHTgjAwe3pVO4QX+oXO64UyykKPMA2KkYITHHBG36HNWvD8Zi8TTXnzq/mFFlYgq6bSSq85z0OR/XmXGMKM5eRTbc4ktlaINNW6tU+2I2oRRSMYzloCQrBSOefJALeharfijQw6z2kcwUXLxxRSB/maJpFzvA65Jx/wABzWVpt9/ZGj3sSNvkPli2JIwdrIxU7eMnDds5yepq/wD2glnPAPJW8EkazTCVt3VyypknAUEj865pRne8XezKbiXLTQ47LUZNV1JxcWlnaxS2dowUOI1zHg5OAATkDuW60wJaW2kzy3GoyapZXEgRVEmJVjeL7kmPusOCDzUdjqNpMtyl1D/octtHBbs5+YxbuQ3qOMj6+5rJ0iSOytbv+2fLhuLiQYUYPmZ4bpycYGDyenPrPLKUVfdWDmiupBaRz6rr19FLdYvbS8R0+UkN8u3AIPCYzwO9TWtjd6VpNxLdfupGZY4/K4TJ/hweRjBOTnqfXm/Fe2MGpPLBJG8jOvlgknI3dAcZznPX+/UMU8ZZ4Ig2cbGTAJU/d+bA5IAIzzyatyk5Ptoc/tUnuQJJMv8AZlzCkiuymOMyShwv7xiUJzzkMDwMEKOPV9nqlnd6HFczQSjAMiw22QrB9u/ac43YzhsZ/PNal04uLGQhGISIsyB8kZByc9sg45I/Ksq3s1KfY3tTIZIwxlVS5ZQMMSwGAMY/OlCUWtdClVj3M2906K71Syu7G/S6hnBijjVdnkkq3lkDsQQB35A9Rly6c9kS+mT7L6ErELlZjtcYOVwTwcLgtzzkVr2unP8AaUO0wW8QbbMsRIjXgHknjkZ/E4zmsaSzuZLyOZX8qGVWD+YCQoDcE44zx6VtGon7qloiJ1VFXSLF/bzx6fqV3GyxtJcwOISeAihiMDHJz0x7V1rXzXPhQ6ZD9mWAMjS4JG5cL8u3+LpzyOPWuMmuLj7EotS8cinaj7yVjXeBkgZHJJ4Pf682DbapDNdC2kWbZtYBpFRXBxhlB4I+uehrNwVldpf0kS8S+iLeuXkc82nQxAPBZQrCjtJlYwNmSD3+VRg+pP4y3F+upta21xsREl5ZkDr9/cUAPYkdf8awWTUYVZGgjLKSxQHqeflOPvKRk9605tNd7SGSWJkmdVaKMMMAkkEEZ9uPrVuMI2uZqu3fQsXusPd28qXbNIRL5ltsflcYyPoRnI+nvmpYXbWtyDcRFFLu8keMkuRg5HsF45PXPerTRRNbRxXkKmWCYsI4oyu8exXI6gZHp1PPN3URcXt4YotMEolVPJKrhRjLMpP8I6fN7isXUinZrQpVW9epS1HULPWby0EjBLPGx0jQgsoOR85zx1z9cd6hs3j0y4keygnuhcS7yA5ZjkDcC3PccexP478mlMmmt9pg242fuztwp6DZgZyTgE+3rS6bA1jbxz+W0atIxnESF/k5HXgufXtxWbxsOV8qv0307nQpSZzsus3EVyGiUok7AqvRSzZbccezfp71Tu5nvIYli+5K4wiyDIOAMkemPzzXZy6RaTQwRSwpF0cDlWwFPQs2AMAcfWorvw1p6FJLNiAE2ymXHXIAcZ9OTgeo/FxzOimk1qDjJ3OE1LVHhU2ySkwYG4BPvt0HOT25H4/Q1p7iG/uV8gHG1CVaQ/M2eSB/CMZ/Ktu40XVbS4MVo8L20sx3BsSSEjIBIycdvz9qr3XhbVNPmhZbWfedm6ZdpDEsBt4PPJyMc16McRRbS5lr5nLzTT1RUmgIZ0hTMLBvMzJ8qsARuIzxk9Pr+cUdyk0qK3lkRMrYADNkj5S2OvA9+x71eGhvLfRRhvJ8knzcLkx8kHdgk9h+JIwa1NL0RG1y2kmhntraRWbIRkkBVgykk884HT6Z9ZqYmEI3v0HFym9Ec3Zq8l5CyAB3clA6f6zHTj6446c1QeyvPEElvp1sTFOjeSCzDkjseeAMkDNevQaTp8dhJpvmyW8c3LhZAJBl9wG/uO2OnJpLbQ7S0aSWG3MazfKXDb13LkZYHIPXnjn37+b/AGvCN7LXp/X6HT9Wl1Z5knhn7NJdwR3KXTW7ENJF8wl6NhccE8Y4J61DpzXU0qC3tWnWdRGUAPygBg49vU+lelXnhppdHaxsJl2yuWGVBZHI67s5HB7VFa+GbiHUDcXCrcyRRH9+T5aNI2ATtHHCjqP1FWs1p8rbkrkwoSTRyyeHLyW5dJY3RII/MYYPyg8HI5OTt5B/rVddPktrGWWASy+ZvDSCPI35wAT0BBHvjPXmvSn015mO248qOWPBKoNzDGNvOf4eKF0XyoI3SV5pYxhzL83mMRjcfoOwri/te3xNGjoO+h5taeF9Qu7CDy8MszFXib/lmucZPXAJ6H2NS3PgXUBDIYJ7d4iyrEQGDzAEZwBnp1569utehW/lm5a3lWNY4yQkYG3gZwWB6Zzx+dX/AC5ikKwyJEg2llQj7oPQH6HtU1c2rQlpYSw6e7OA8PeCbm21rzNThjcKytDuO4hl6Ag4GMdeueM11Mmn2sRYTXMUMd02144mIEoUklQM44OeufocCteG3UMfNeSUTH5Sx3fgCelQyxoL550iaXGFRiPuL0IBHr7VxzzCrWqXcradP67mqpJRsjEuNAsmuiIZpkVsK0PmHyyFAxnPVsdPX+ZPoNl/ZsljHbtK85XaqYJVhnGMjAx0yegx1ret4XgupYiknkFf3bfeIyMkE9hggDnPFPVIUu40/ebiSDv6MCfrg9KyeOqbXbtqNU1YxxYLYaOkN0gHkAoIlcHfk/w8Z5zyR9azrxdSudatzpdgEjt9w3sx2DIGAC2P0JGR09evWFIXfag3vg7c9cdO/wClRyElxMs4ZJcb4wfQk8dwf8Kzp45817Xb73tr5feJ0bmNDYE2TQj5nRF5GOFY52joNozyfrn3vxabFBKxlllYgHDu24Jk5IweMdP8fW8fLWN3idssw3ZPUdvrmla4VY/Ml4U9FIzn6/j2rCpiqk9i400jIOiQzu8RQFfM3liAQSW3n2zkn14PvVuLRbILkxRRbuR5JKZHvg1bLRySENHnf/qyCCT7nPT+dReXCyJ9oaVSq7QDIV6fjSliKklZyaLUNdEeey79N1GezV94txGd+MF8g9fwUCsvXtRlF9H5n7wOMtzg49Bj+dFFfpFlzI89tnPNrMzSSGRFby9qdSN2GJycHnv+dP1S+kay8/ADpgqR70UVaSIvoLbxKYSLjdNhTJySO+MVG187alcI6jKgruBOcAcY9Dx1oopR1uPoaqW5nsElWWRAxPyZzj5SSB7e3atS4tfsix3ETkLtVmj5wxJx69OP1ooqXsUtBIXNrqsyJzDErSCNuQSSCcnr/AP8mn3MhW5SJ2dk3kuAcbjyR245PvRRUTSuaGd58zTPcBwPMwQmOF+Qn+mPpVqK6ms0Gxyzu5QuTzycE/XiiispK6+Rn1NGzhjl0eZ2QY8wIwHUjHr/AJ70+8H2eKB4mbzI4tiMx6KrhcEDrnefp29aKK4HJ3OarKWwj6XD/aj2CtIIIIkJUuW3kn39+cVtp4Ttbi4QyTyvGieYY3AOcAHGRggZY/p6UUV5+Ir1YpWfQqEU9yU+HbXymnj/AHXms8rqmQGC87Tz0I4pNN0/y3t3SQGT7y74lZVIK8gdf4j39PxKK5fbVJUm2/61NlCKnohb/UngdLWJFEd1cLFgnPlghske/wAv61Z0y3W5eIbni8pEYeWxG47CTkdCDt6H1ooqaiUKN4mkNW7kV28whE/m5lhgLLx8hG48Fc4Pf/CrkukW8ltPGqgPK4G9l3bM4HA7cdvxoornlKULcrtr/wAE6qa5l7xm3Ntb2dpEbWBIknDibH3pBkDBb6E/nUWoQG5F6iyNDa2yxL5EXAYOxTr1GOT9aKK7KMnyqXX/AIJhVirNGPqM8FrpdvfNaJLJKgiALEADEnUdCRt49MmtnSNMjvdIieQjdBJ5iEoDjOBjnthsHPXHaiit8XKUKV4vqZ0knZsLa1s726EH2YRMPMQSq5zzgnjpzmtOxhtkhlMNuIxHhsBic52jHPbpxz0oorhrSlflvpb9TflS6E8cTQWd2+4FFuFSJFXBQkYLbupPJrMawhe/nSQyMwDQs5kPzAYBOOgJGMn296KKyoyd5P8AroOaSRo2wjitopJIxNOBs8xgOBtJOBjjOKaunW8sqs6szTs4wxyqE5yQp4zxiiisnKScpJ63f6m/KuVFkWENtI2R5jiEje33iMHjPXHtWdO8bQzTzRBmQSJwxBIAB/Pgc+w+hKKKEnJczeugp6RJreCKO5kt4ECqYxLIzDLSNg8kjHpVq0xumAGPJwY+c4yvv1ooqp6wbfl+hEN0SzOPLCGNG3MVOV4xnJ4/Co44wwb55ArR7tobgZOT29j+dFFc8NIfeaMmjaSBnRHx5ahEYDkA59c/3f1pLH5pmjcu52iQF2yBkdMfiTRRWMn7r+Q2kSlyAu043cevA/xzS3DJBb/LEpJZBznHzMBn9aKKmMU3G/8AWo5MYtz/AKcAI1AUB/rksMfpUiqsTTxkuwxtPzY4wenp07UUVVSKjouxnBtxuyCykeW2aJdqB0DkgcnJH+J5pIJWVZQedkgVfmPUt1PPP0ooreUIuT06oq+jOf1/xJcWEg+zpys7xNucncAM/hnmo9K8ZXmo6qbZ4Y0DscncSMdOnrx1oor6CGDw7w6bjrY86Vaaq2uWbnxDv8P290bNR58W7YrkbCGCjBx/nFVNEnN3cRLdZkaAKUbcRgszKTjpnjr/ACoorGVGnToT5FbU0VSTqJNlrXtXvtJ1GSO2lQq8i4zGMgsduc9TgVFY6lNd2URusOCWik2kq0hADbif+Ant3ooqIUofVoytq/8AIOeXtGrmrrmqHTdIu7uGBN9tEpQZI6np61WS5mkjS4BRhMiuFlBYpx0BBHH1oorLB0KcoK63f6JlTqSUrXP/2Q==" height="100" />
+            </div>
+        <div class="withimageContainer">
+            <p class="withImageTitle"><a href="https://info.bcassessment.ca//news/Pages/Special-Notification-for-2021-Farm-Classifications.aspx">BC Assessment Special Notification for 2021 Farm Classifications</a> </p>
+            <div class="sp-article-date">
+                <p>Aug 20, 2020</p>
+            </div>
+        </div>
+    </div>
+    <div class="sp-article-comments">
+        <p>On July 29, 2020, the Provincial Government announced that, in response to the COVID-19 pandemic, all 2020 existing Farm Class properties will automatically retain Farm Class for the 2021 Assessment Roll. </p>
+    </div>
+
+    <div class="sp-article-more">
+        <a href="https://info.bcassessment.ca/news/" >See more news</a>
+    </div>
+
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="aboutustweet">
+            
+<div id="homeaboutussection" class="col-xs-12 col-sm-6 col-lg-5 col-lg-push-1">
+    <h4>About us</h4>
+    <div class="aboutusinfo">
+        <p>BC Assessment produces independent, uniform and efficient property assessments on an annual basis for all property owners in the province</p>
+    </div>
+    <button id="btnaboutus" style="" class="btn1" onclick="window.location.href = 'https://info.bcassessment.ca/about-us';return false;">Learn more</button>    
+</div>
+
+<hr class="aboutusverticalseparator"/>
+
+
+
+<div class="col-xs-12 col-sm-6 col-lg-5 col-lg-push-1 col-lg-offset-0 aboutusseperator" id="tweetsection">
+   
+        <div class="row tweetheadersection">
+            <img src="Content/Images/twiter-logo-colred.png" height="24" width="32" />
+            <h4 style="">@bcassessment</h4>
+        </div>
+        
+
+        <div>
+
+            <script src="../platform.twitter.com/widgets.js" async></script>
+            <a class="twitter-timeline"
+               href="https://twitter.com/bcassessment"
+               data-tweet-limit="1" data-width="auto" data-height="250"
+               data-chrome="nofooter noheader transparent noborders">
+
+            </a>
+
+        </div>
+        <div class="followtweetersection">
+
+            <a id="followbcatwitter" href="https://twitter.com/bcassessment" target="_blank">Follow @bcassessment</a>
+        </div>
+
+   
+    
+</div>
+
+           
+        </div>
+
+    </div>
+</div>
+
+        
+
+<div id="page-footer">
+
+        <div class="row footer-menu footer-links-line1">
+            <div id="assessmentsearchfooterdiv" class="col-sm-2 col-xs-12"><a id="assessmentsearchfooter" href="Property/AssessmentSearch5e32.html?bcalogin=1&amp;act=">Assessment Search</a></div>
+            <div id="servicesproductsfooterdiv" class="col-sm-2 col-xs-12"><a id="servicesproductsfooter" href="https://info.bcassessment.ca/services-and-products/">Services &&nbsp;products</a></div>
+            <div id="propertyinfofooterdiv" class="col-sm-3 col-xs-12"><a id="propertyinfofooter" href="https://info.bcassessment.ca/property-information-trends">Property information &&nbsp;trends</a></div>
+            <div id="aboutusfooterdiv" class="col-sm-1 col-xs-12"><a id="aboutusfooter" href="https://info.bcassessment.ca/About-Us">About us</a></div>
+            <div id="contactusfooterdiv" class="col-sm-1 col-xs-12"><a id="contactusfooter" href="https://info.bcassessment.ca/contact-us">Contact us</a></div>
+        </div>
+        <div class="row footer-menu footer-links-line2">
+            <div class="footer-links-line2-left col-xs-12 col-sm-7">
+                <a id="newslinkfooter" href="https://info.bcassessment.ca/News">News</a><span class="footer-seperator-mobile" style="display: none;">|</span>
+                <a id="careerfooter" href="https://info.bcassessment.ca/Careers">Careers</a><span class="footer-seperator-mobile" style="display: none;">|</span>
+                <a id="indexforms" href="https://info.bcassessment.ca/Forms">Index of forms</a><span class="footer-seperator-mobile" style="display: none;">|</span>
+                <a id="glossaryfooter" href="https://info.bcassessment.ca/About-Us/Glossary">Glossary</a>
+            </div>
+
+            <div class="footer-links-line2-right col-xs-12 col-sm-5">
+                <div class="social-responsive" style="float:right">
+                    <span class="social-short">
+                        <a href="https://www.facebook.com/pages/BC-Assessment/168042796561277" target="_blank">
+
+                            <img class="socialimg" src="Content/Images/BCA-Social-Icons-facebook.png" />
+                        </a>
+                    </span>
+                    <span class="social-short">
+                        <a href="https://twitter.com/bcassessment" target="-blank">
+                            <img class="socialimg" src="Content/Images/BCA-Social-Icons-twitter.png" />
+                        </a>
+                    </span>
+                    <span>
+                        <a href="https://www.linkedin.com/company/bc-assessment" target="-blank">
+                            <img class="socialimg" src="Content/Images/BCA-linkedin.png" />
+                        </a>
+                    </span>
+                    <span class="social-short">
+                        <a href="https://www.youtube.com/user/BCAssessmentVideos" target="-blank">
+                            <img class="socialimg" src="Content/Images/BCA-youtube.png" />
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row footer-menu footer-links-bottom-line">
+            <div class="footer-copyright col-sm-4 col-xs-12">
+                <span class="copyright-year">©2020 BC Assessment</span>
+            </div>
+            <div class="footer-links-line3 col-sm-6 col-xs-12">
+                <span><a id="copyrightfooter" href="https://info.bcassessment.ca/Copyright">Copyright</a></span>
+                <span>
+                    <a id="disclaimerfooter" href="https://info.bcassessment.ca/Disclaimer">Disclaimer</a>
+                </span>
+                <span><a id="privacyfooter" href="https://info.bcassessment.ca/Privacy">Privacy statements</a></span>
+                <span><a id="termsofusefooter" href="https://info.bcassessment.ca/Pages/Terms_of_Use.aspx">Terms of use</a></span>
+            </div>
+        </div>
+
+  
+</div>
+
+
+        
+    </div>
+    <div class="modal fade" id="divNoCookies" tabindex="-1" role="dialog" style="display: none">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content" id="NoCookiesContent">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Cookies need to be enabled</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            The BC Assessment's property assessment search website requires cookies to be enabled on your browser. Please turn on cookies from your browser settings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+
+
+            if (navigator.cookieEnabled == false) {
+                if ($('#divNoCookies').modal) { $('#divNoCookies').modal('show'); }
+            }
+            else {
+                if ($('#divNoCookies').modal) { $('#divNoCookies').modal('hide'); }
+            }
+
+
+        });
+
+    </script>
+    <div id="root"></div>
+
+</body>
+
+<!-- Mirrored from www.bcassessment.ca/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Nov 2020 19:10:16 GMT -->
+</html>

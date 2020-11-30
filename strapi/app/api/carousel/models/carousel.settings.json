@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carousels",
+  "info": {
+    "name": "Carousel"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Banner_1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "banner.banner"
+    },
+    "Banner_2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "banner.banner"
+    },
+    "Banner_3": {
+      "type": "component",
+      "repeatable": false,
+      "component": "banner.banner"
+    }
+  }
+}

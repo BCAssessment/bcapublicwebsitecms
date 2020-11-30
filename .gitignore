@@ -1,0 +1,11 @@
+bcassessment.csproj
+obj/*
+bin/*
+.vscode
+db/*
+variables.auto.tfvars
+strapi_local/
+BCAHomepageClone/public/index (2).html
+src/obj
+act.secrets
+.notes
