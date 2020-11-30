@@ -1,0 +1,74 @@
+name: Build and Test - CI Workflow
+on:
+  push:
+  # TODO: Change to Pull Request instead of push
+    branches:
+    - main
+    paths:
+    - "strapi/app/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: strapi
+
+    strategy:
+      matrix:
+        #node-version: [10.x, 12.x, 14.x]
+        node-version: [10.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - working-directory: strapi/app
+        run: npm install
+      - working-directory: strapi/app
+        run: npm run build --if-present
+      # - run: npm test
+        env:
+          CI: true
+
+
+      - name: 'Login via Azure CLI'
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+      - name: 'Build and Push Image to ACR'
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.11.1
+          inlineScript: |
+            cd strapi # Is there a better way to set this folder as a default?
+            az acr build -t ${{ secrets.ACR_LOGIN }}/strapi:${{ github.sha }} -r ${{ secrets.ACR_NAME }} .
+
+      # TODO: For some reason this docker push is sending the file to docker.io which we aren't using.  Perhaps there's a param missing to target the repo?
+      # TODO: try from CLI manually and if that works just skip the predefined actions and do it ourselves via az cli.
+      # - name: 'Build and push image'
+      #   uses: azure/docker-login@v1
+      #   with:
+      #     login-server: ${{ secrets.ACR_LOGIN }}
+      #     username: ${{ secrets.ACR_NAME }}
+      #     password: ${{ secrets.ACR_PASSWORD }}
+      # - run: |
+      #     docker build . -t ${{ secrets.ACR_LOGIN }}/strapi:${{ github.sha }}
+      #     docker push ${{ secrets.ACR_LOGIN }}/strapi:${{ github.sha }}
+
+      # - name: 'Deploy to Azure Container Instances'
+      #   uses: 'azure/aci-deploy@v1'
+      #   with:
+      #     resource-group: ${{ secrets.AZURE_RESOURCE_GROUP }}
+      #     dns-name-label: ${{ secrets.AZURE_RESOURCE_GROUP }}${{ github.run_number }}
+      #     image: ${{ secrets.ACR_LOGIN }}/strapi:${{ github.sha }}
+      #     registry-login-server: ${{ secrets.ACR_LOGIN }}
+      #     registry-username: ${{ secrets.ACR_NAME }}
+      #     registry-password: ${{ secrets.ACR_PASSWORD }}
+      #     name: aci-strapi
+      #     location: 'canadacentral'

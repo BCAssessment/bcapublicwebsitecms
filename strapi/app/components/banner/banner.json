@@ -1,0 +1,68 @@
+{
+  "collectionName": "components_banner_banners",
+  "info": {
+    "name": "Banner",
+    "icon": "flag"
+  },
+  "options": {},
+  "attributes": {
+    "Top": {
+      "type": "richtext"
+    },
+    "Middle": {
+      "type": "richtext"
+    },
+    "Bottom": {
+      "type": "richtext"
+    },
+    "Link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.link"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "TabletImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "MobileImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "SmallMobileImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

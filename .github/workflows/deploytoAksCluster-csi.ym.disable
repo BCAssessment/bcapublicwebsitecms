@@ -1,0 +1,33 @@
+name: Build, Test, Deploy CSI
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - testing
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+
+    - uses: azure/k8s-set-context@v1
+      with:
+        kubeconfig: ${{ secrets.aks_devaks_kubeConfig }}
+      id: login
+
+    - name: Create namespace
+      run: |
+        namespacePresent=`kubectl get namespace | grep development | wc -l`
+        if [ $namespacePresent -eq 0 ]
+        then
+            echo `kubectl create namespace development`
+        fi
+
+    - uses: azure/k8s-deploy@v1.3
+      with:
+        namespace: development
+        manifests: |
+          manifests/provider-azure-installer.yml
+          manifests/provider-azure-kv.yml

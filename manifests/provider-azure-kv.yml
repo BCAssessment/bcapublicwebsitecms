@@ -1,0 +1,40 @@
+apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
+kind: SecretProviderClass
+metadata:
+  name: azure-kv-provider
+  namespace: development
+spec:
+  provider: azure
+  secretObjects:
+  - secretName: akv-secrets
+    type: Opaque
+    labels:                                   
+      environment: "development"
+    data:
+    - objectName: DBHOST
+      key: DATABASE_HOST
+    - objectName: DBUID
+      key: DATABASE_USERNAME
+    - objectName: DBPWD
+      key: DATABASE_PASSWORD
+  parameters:
+    usePodIdentity: "false"
+    keyvaultName: "BCA-KeyVaultPOC"
+    userAssignedIdentityID: "de160c75-a00c-4339-8ff8-49b297cc4e03"
+    cloudName: "AzurePublicCloud"   
+    objects:  |
+      array:
+        - |
+          objectName: DBHOST
+          objectType: secret        # object types: secret, key or cert
+          objectVersion: ""         # [OPTIONAL] object versions, default to latest if empty
+        - |
+          objectName: DBUID
+          objectType: secret
+          objectVersion: ""
+        - |
+          objectName: DBPWD
+          objectType: secret
+          objectVersion: ""
+    resourceGroup: "dev-POC"
+    tenantId: "65e4e06f-f263-4c1f-becb-90deb8c2d9ff"

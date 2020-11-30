@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<!-- Mirrored from www.bcassessment.ca/Property/AssessmentSearch?bcalogin=1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Nov 2020 19:10:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.bcassessment.ca/Images/favicon.ico" />
+    <title>BC Assessment - Independent, uniform and efficient property assessment</title>
+    <meta name="keywords" content="property tax assessment, property, property assessment, property tax, tax assessment, valuation, property valuation, property value, British Columbia, british columbia, land taxation, assessment, Assessment Act, assessor, financing local government,  BC A" />
+    <meta name="description" content="BC Assessment provides current actual value assessments for tax purposes on all properties in British Columbia and provides expertise in real estate data, mass appraisal systems and management." />
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-109417385-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+
+    </script>
+
+    
+    <link href="https://www.bcassessment.ca/Content/fontawesome/css/all.css" rel="stylesheet" />
+
+    <link href="https://www.bcassessment.ca/Content/layoutcss?v=8YLIeZ0Gkxi4grEi0CJNft5P4vnlJWN7jk8ZZnsZq2s1" rel="stylesheet"/>
+
+    <link href="https://www.bcassessment.ca/Content/responsivecss?v=8Xfo7JuiHL90fQCTiPP6InlNe6yipG-zC6aamlH1qxE1" rel="stylesheet"/>
+
+    <script src="https://www.bcassessment.ca/Scripts/layoutjs?v=nPmcH26C_uF1SN-KjKJDCk_KXMsk-OLoEzTQck-tY4U1"></script>
+
+
+    
+    
+    
+
+    <script>
+        var act = '';
+    </script>
+
+</head>
+<body>
+    <div>
+        <div id="public-menu" class="main-region">
+            <div class="content-area ">
+                <div class="logo-area logo-large" onclick="window.location.href='https://www.bcassessment.ca/?sp=1&amp;act=';">
+                    <img src="https://www.bcassessment.ca/Content/Images/BC-Assessment-logo.png" style="margin-top:20px" />
+                </div>
+
+                <div class="menu-area">
+                    
+
+
+
+<style>
+    ul#ulloginmenu > li > a {
+        color: #07819a;
+    }
+</style>
+
+<script>
+    var gotobceid = function () {
+       window.location.href='https://sfs7.gov.bc.ca/affwebservices/public/saml2sso?SPID=https://auth.bcassessment.ca';
+    }
+
+    var gotoidir = function () {
+        window.location.href = 'https://sfs7.gov.bc.ca/affwebservices/public/saml2sso?SPID=bca-poc-auth-idir';
+    }
+    var gotoBCALogin = function () {
+
+        //window.location.href = '/Property/Dashboard?bcalogin=1';
+        window.location.href = 'https://www1.bcassessment.ca/Dashboard' +'?bcalogin=1';
+    }
+
+    var showBCeIDToolTip = function (tooltipalign) {
+
+        $('.bceidinfo').balloon({
+            html: true,
+            css: {
+                border: "solid 1px grey",
+                padding: "5px",
+                margin: "0px",
+                fontSize: "95%",
+                opacity: "1",
+                backgroundColor: "white",
+                fontWeight: 'normal',
+                color: "#777"
+            },
+            hideDuration: 300,
+            position: tooltipalign,
+            tipSize: 20,
+            classname: "logintooltip",
+
+            contents: "<p>Log in using your Business BCeID account for authorized access to BC Assessment products and services</p>"
+        });
+
+    }
+
+    var showIDIRToolTip = function (tooltipalign) {
+
+        $('.idirinfo').balloon({
+            html: true,
+            css: {
+                border: "solid 1px grey",
+                padding: "5px",
+                margin: "0px",
+                fontSize: "95%",
+                opacity: "1",
+                backgroundColor: "white",
+                fontWeight: 'normal',
+                color: "#777"
+            },
+            hideDuration: 300,
+            position: tooltipalign,
+            tipSize: 20,
+            classname: "logintooltip",
+
+            contents: "<p>Log in using your IDIR account for authorized access to BC Assessment products and services</p>"
+        });
+
+    }
+  
+    var shown = false;
+
+    var bceid_info = "<sup onmouseover='showBCeIDToolTip(\"left\")' onmouseenter='showBCeIDToolTip(\"left\")' ><img id='bceidinfoiconDDL' onmouseover='showBCeIDToolTip(\"left\")' onmouseenter='showBCeIDToolTip(\"left\")' class='bceidinfo' src='https://www.bcassessment.ca/Content/Images/info_marigold.png'/></sup>";
+    var idir_info = "<sup onmouseover='showIDIRToolTip(\"left\")' onmouseenter='showIDIRToolTip(\"left\")'><img id='idirinfoiconDDL'  onmouseover='showIDIRToolTip(\"left\")'  onmouseenter='showIDIRToolTip(\"left\")' class='idirinfo'  src='https://www.bcassessment.ca/Content/Images/info_marigold.png'/></sup>";
+    $(document).ready(function () {
+       
+        $('#bceidinfoiconDDL').hover(function () {
+            showBCeIDToolTip('left');
+        });
+
+        $('#bceidinfoicon').hover(function () {
+            showBCeIDToolTip('right');
+        });
+
+        $('#idirinfoiconDDL').hover(function () {
+            showIDIRToolTip('left');
+        });
+
+        $('#idirinfoicon').hover(function () {
+            showIDIRToolTip('right');
+        });
+
+        //$(document).click(function () {
+        //    $('#LoginLink').hideBalloon();
+        //});
+        $('body *:not(.balloon_login, .BCALoginRegisterPanel)').click(function () { //hide balloon when click outside
+            $('#LoginLink').hideBalloon();
+            shown = false;
+        });
+       
+        $('#LoginLink').on("click", function(e) {
+            e.stopPropagation(); // This is required to stop link event propagation
+            
+            if (!shown) {
+                $('#LoginLink').showBalloon({
+                    html: true,
+                    css: {
+                        //border: "solid 2px #2a6496",
+                        padding: "5px",
+                        margin: "0px",
+                        fontSize: "95%",
+                        opacity: "1",
+                        backgroundColor: "#E0F3F1",
+                        fontWeight: 'normal',
+                        width: '260px'
+                    },
+                    position: "bottom",
+                    offsetX: -20,
+                    classname: "balloon_login",
+                    tipSize: 12,
+                    hideDuration: 300,
+                    showDuration: 500,
+                    contents:
+                "<div class='table-row' id='divloginDropDown'>\
+<div class='loginDropdownLeft' id='divloginDropdownLeft'>\
+<h4>BC Assessment account</h4>\
+<p>Access personalized favourites, create comparisons and use our new interactive map</p>\
+<button class='LoginDDLButton' onclick='gotoBCALogin();return false;'>Log in</button>\
+<p>No account? <a href='https://auth.bcassessment.ca/register/'>Create one!</a></p>\
+</div>\
+<div class='loginDropdownRight' id='divloginDropdownRight'>\
+<h5 class='businessloginheader'>Or log in with an alternative account</h5>\
+<button id='btnLoginBCeID' class='LoginBUButton' onclick='gotobceid();return false;' >Log in with BCeID</button>" + bceid_info + " </br>\
+<button id='btnLoginIDIR' class='LoginBUButton'  onclick='gotoidir();return false;' >Log in with IDIR</button>" + idir_info + "\
+</div>\
+        </div>" });
+
+                //return false;
+
+                $('#bceidinfoiconDDL').hover(function () {
+                    showBCeIDToolTip('left');
+                });
+
+                $('#idirinfoiconDDL').hover(function () {
+                    showIDIRToolTip('left');
+                });
+
+                //$('#bceidinfoiconDDL_mobile').hover(function () {
+                //    showBCeIDToolTip('top left');
+                //});
+
+                //$('#idirinfoiconDDL_mobile').hover(function () {
+                //    showIDIRToolTip('bottom left');
+                //});
+
+                shown = !shown;
+            } else {
+                $('#LoginLink').hideBalloon();
+                shown = !shown;
+            }
+        })
+
+    });
+
+    //detect browser size change - hide login balloon
+    window.addEventListener("resize", function () {
+        $('.balloon_login').hide();
+        $('#LoginLink').hideBalloon();
+        shown = false;
+    }, false);
+</script>
+
+<div class="mobile-logo-container mobile-logo-auth-home">
+    
+<div class="logo-area logo-mobile" onclick="window.location.href='https://www.bcassessment.ca/?sp=1&amp;act=';">
+    <img class="logo-mobile-image" src="https://www.bcassessment.ca/Content/Images/BCA-logo-wide.jpg" />
+    
+    
+</div>
+
+</div>
+
+
+<div class="Search-area">
+
+    <input name="input-search" id="input-search" type="text" placeholder="Search services and trends"
+            onkeypress="if (event.keyCode == 13) { var term = this.value; if (term && term.length > 0) { var newlocation = 'https://info.bcassessment.ca//search-results/Pages/Default.aspx?k=' + term; window.location.href = newlocation; } }">
+    <button id="btnSharePointSearch" value=""
+            onclick="var term = document.getElementById('input-search').value; if (term && term.length > 0) { var newlocation = 'https://info.bcassessment.ca//search-results/Pages/Default.aspx?k=' + term; window.location.href = newlocation; }">
+        <img src="https://www.bcassessment.ca/content/Images/icn-search.png">
+    </button>
+    <div class="BCALoginRegisterPanel">
+        <a href="#" id="LoginLink">Log in <span class="caret"></span></a>       
+        <span>|</span> <a href="https://auth.bcassessment.ca/register/">Register</a>
+    </div>
+</div>
+
+
+<style>
+    @font-face {
+        font-family: "Montserrat Regular";
+        src: url('https://www.bcassessment.ca/Content/fonts/Montserrat-Regular.ttf') format('truetype');
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: "Montserrat Bold";
+        src: url('https://www.bcassessment.ca/Content/fonts/Montserrat-Bold.ttf') format('truetype');
+        font-weight: bold;
+    }
+
+    #bca-navbar > * {
+        font-family: 'Montserrat Regular', sans-serif !important;
+    }
+
+    /*This is to fix a responsive UI random issue for Chrome, when Contac Us menu item appears in the second line*/
+    /*#bca-navbar ul {
+        width: max-content;
+    }*/
+</style>
+
+
+<div id="bca-navbar" class="clearfix menu-block" style="display:inline-block">
+    <nav class="navbar navbar-default bca-navbar">
+        <div class="container navcontainer homepage-navcontainer">
+            <div class="navbar-header">
+                <button type="button" id="nav-toggle" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#BCA-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="BCA-navbar-collapse-1" style="margin-bottom:5px;width:828px;">
+                <div class="bca-global-navigation">
+                    <ul class="nav navbar-nav navbar-home">
+
+                        
+
+
+                            <li id="assessment-search" class="top-level"><a id="searchlinkItemMenu" href="https://www.bcassessment.ca/Property/AssessmentSearch?bcalogin=1">Assessment search</a></li>
+
+                        <li id="services-products" class="dropdown bca-dropdown top-level">
+                            <a id="serviceslinkmenuitem" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services &amp;&nbsp;products <span class="caret"></span></a>
+                            <div class="dropdown-menu container bca-dropdown-menu" style="width:940px;top:auto;padding-top:20px;">
+                                <!-- dropdown-menu -->
+                                <div class="col-md-4 col-sm-6 bca-megamenu">
+                                    <div class="bca-menu-description">
+                                        <h2>
+                                            Services &amp; products
+                                        </h2>
+                                        <p>At BC Assessment, we provide convenient accessibility to a variety of online, self-service property-related services and products.</p>
+                                        <div class="seeMore"><a id="seemoreServices" href=https://info.bcassessment.ca/Services-products class="button-large button-light">See more</a></div>
+                                    </div>
+                                    <!-- /.bca-menu-description -->
+                                </div>
+                                <!-- /.col-md-4 -->
+                                <div class="col-md-8 col-sm-6 bca-dropdown-list">
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="servicesofgovernment" href=https://info.bcassessment.ca/Services-products/government>Services for government</a></li>
+                                        <li><a id="understandingprocess" href=https://info.bcassessment.ca/Services-products/Understanding-the-assessment-process>The assessment process</a></li>
+                                        <li><a id="updateproperty" href=https://info.bcassessment.ca/Services-products/update-your-property-information>Update your property information</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="appeallink" href=https://info.bcassessment.ca/Services-products/appeals>Appeals</a></li>
+                                        <li><a id="assessmentnotice" href=https://info.bcassessment.ca/Services-products/your-assessment-notice>Your assessment notice</a></li>
+                                        <li><a id="propertyinformationservices" href=https://info.bcassessment.ca/services-and-products/Pages/Buy-and-Exchange-Data.aspx>Property information services</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                </div><!-- /.col-md-8 -->
+                                <div class="seeMore-mobile col-xs-12"><a id="seemoreServices" href=https://info.bcassessment.ca/Services-products class="button-large button-light">See more</a></div>
+                            </div><!-- /.dropdown-menu -->
+                        </li>
+                        <!-- /.top-level -->
+                        <li id="property-info-trends" class="dropdown bca-dropdown top-level">
+                            <a href="#" id="propertyinformationtrends" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Property information &amp;&nbsp;trends <span class="caret"></span></a>
+                            <div class="dropdown-menu container bca-dropdown-menu" style="width:940px;top:auto;padding-top:20px;">
+                                <!-- dropdown-menu -->
+                                <div class="col-md-4 col-sm-6 bca-megamenu">
+                                    <div class="bca-menu-description">
+                                        <h2>Property information &amp; trends</h2>
+                                        <p>Property assessment information is announced on an annual basis.</p>
+                                        <div class="seeMore"><a id="seemoretrends" href=https://info.bcassessment.ca/property-information-trends class="button-large button-light">See more</a></div>
+                                        
+                                    </div>
+                                    <!-- /.bca-menu-description -->
+                                </div><!-- /.col-md-4 -->
+                                <div class="col-md-8 col-sm-6 bca-dropdown-list">
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="provincewide" href=https://info.bcassessment.ca/property-information-trends/property-assessment-of-bc/province-wide>Province-wide</a></li>
+                                        
+                                        <li><a id="Fraservalley" href=https://info.bcassessment.ca/property-information-trends/property-assessment-of-bc/lower-mainland>Lower Mainland</a></li>
+                                        <li><a id="vancouverisland" href=https://info.bcassessment.ca/property-information-trends/property-assessment-of-bc/vancouver-island-region>Vancouver Island</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="thompsonokanagan" href=https://info.bcassessment.ca/Property-information-and-trends/Pages/thompson-okanagan.aspx>Thompson Okanagan</a></li>
+                                        <li><a id="KooteneyColumbia" href=https://info.bcassessment.ca/Property-information-and-trends/Pages/kootenay-columbia.aspx>Kootenay Columbia</a></li>
+                                        <li><a id="northernbc" href=https://info.bcassessment.ca/Property-information-and-trends/Pages/northern-bc.aspx>Northern BC</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                </div><!-- /.col-md-8 -->
+                                <div class="seeMore-mobile col-xs-12"><a id="seemoretrends" href=https://info.bcassessment.ca/property-information-trends class="button-large button-light">See more</a></div>
+                            </div><!-- /.dropdown-menu -->
+                        </li>
+                        <li id="about-us" class="dropdown bca-dropdown top-level">
+                            <a id="aboutuslink" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About us <span class="caret"></span><span class="about-us-extended" style="display: none;"> &nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+                            <div class="dropdown-menu container bca-dropdown-menu" style="width:940px;top:auto;padding-top:20px;">
+                                <!-- dropdown-menu -->
+                                <div class="col-md-4 col-sm-6 bca-megamenu">
+                                    <div class="bca-menu-description">
+                                        <h2>About us</h2>
+                                        <p>BC Assessment develops and maintains real property assessments throughout British Columbia in addition to providing real property information​.</p>
+                                        <div class="seeMore"><a id="seemoreaboutus" href=https://info.bcassessment.ca/about-us class="button-large button-light">See more</a></div>
+                                    </div><!-- /.bca-menu-description -->
+                                </div><!-- /.col-md-4 -->
+                                <div class="col-md-8 col-sm-6 bca-dropdown-list">
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="aboutbca" href=https://info.bcassessment.ca/about-us/about-BC-Assessment>About BC Assessment</a></li>
+                                        <li><a id="howbcaworks" href=https://info.bcassessment.ca/about-us/how-BC-Assessment-works>How BC Assessment works</a></li>
+
+                                        <li><a href=https://info.bcassessment.ca/About-Us/vision-mission-values>Our vision, mission, and values</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                    <ul class="col-md-6 list-unstyled">
+                                        <li><a id="reportandplans" href=https://info.bcassessment.ca/about-us/Reports-and-Plans>Reports and plans</a></li>
+                                        <li><a id="awardslink" href=https://info.bcassessment.ca/about-us/awards>Awards</a></li>
+                                        <li><a id="statedcaseslinks" href=https://info.bcassessment.ca/About-Us/stated-cases>Stated cases</a></li>
+                                    </ul><!-- /.col-md-6 -->
+                                </div><!-- /.col-md-8 -->
+                                <div class="seeMore-mobile col-xs-12"><a id="seemoreaboutus" href=https://info.bcassessment.ca/about-us class="button-large button-light">See more</a></div>
+                            </div><!-- /.dropdown-menu -->
+                        </li>
+                        <li id="contactuslink" class="top-level"><a href=https://info.bcassessment.ca/contact-us>Contact us</a></li>
+                    </ul>
+                </div><!-- /.bca-global-navigation -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav><!-- /.navbar-nav -->
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        
+
+
+<link href="https://www.bcassessment.ca/Content/assessmentsearchcss?v=aU2FKSYM0VRJzQDWQKtcuuWUQ_gskb8UvbUT0pQqvkg1" rel="stylesheet"/>
+
+
+<div id="public-search" class="main-region">
+   
+
+    
+
+
+<script src="https://www.bcassessment.ca/Scripts/App/searchjs?v=RLStWzNGsvQcSo2SZTlGxUJXpw2jjXJUzwxLKmemAVs1"></script>
+
+<script>
+    try {
+        if (bcaPortal != undefined)
+            bcaPortal.SearchSiteUrl('https://www.bcassessment.ca/')
+    }
+    catch (err) {
+        console.log(err);
+    }
+
+</script>
+
+<link href="https://www.bcassessment.ca/Content/searchbarcss?v=adVpCly1VWNJwuaIPHxQAsDfVy1pxShsO8rTbG2lvew1" rel="stylesheet"/>
+
+
+<div id="searchSection">
+    <div Id="Searchbar" class="searchBanner-body">
+        
+            <p>
+                <span>Find your property assessment</span>
+                <button id="searchcollapsecontrol" class="searchexpand expand"></button>
+            </p>
+
+        <div id="searchbody">
+            <select id="ddlSearchType" class="dropMenu left">
+                <option value="Address">Civic address</option>
+                <option value="Roll">Roll</option>
+
+                <option value="Plan">Plan</option>
+                <option value="PID">PID</option>
+            </select>
+
+            <input type="text" id="rsbSearch" name="searchAddress" maxlength="100" class="bannerSearch ui-autocomplete-input" placeholder="Enter address">
+
+            <input type="text" id="txtJurisdiction" name="searchJurisdiction" maxlength="75" class="bannerSearch ui-autocomplete-input" placeholder="Enter jurisdiction #" />
+            <input type="text" id="txtRollNumber" name="searchRoll" maxlength="30" class="bannerSearch" placeholder="Enter complete roll #" />
+
+            <input type="text" id="txtPlan" name="searchPlan" maxlength="30" class="bannerSearch" placeholder="Enter plan #" />
+            <input type="text" id="txtLot" name="searchLot" maxlength="30" class="bannerSearch" placeholder="Enter lot #" />
+
+            <input type="text" id="txtPID" name="searchPID" maxlength="15" class="bannerSearch" placeholder="Enter complete PID" />
+            <button id="btnSearch" style="display:none">
+                <img src="https://www.bcassessment.ca/content/Images/icn-search.png" style="" />
+            </button>
+            <div id="search-info">
+                <span>Use of bcassessment.ca implies agreement with our</span>
+                <button id="disclaimerinfo" class="disclaimerinfoexpand expand"></button>
+                <a id="tocSearchBar" href="https://info.bcassessment.ca/Pages/Terms_Of_Use.aspx">terms of use</a><span>, </span>
+                <a id="collectionnoticeSearchBar" href="https://info.bcassessment.ca/Pages/Collection_notice.aspx">collection notice</a><span> and </span>
+                <a id="privacysearchbar" href="https://info.bcassessment.ca/Privacy">privacy statements</a>.
+            </div>
+
+            <div id="search-disclaimer">
+                <p>
+                    Any commercial use of these data in whole or in part, directly or indirectly,
+                    including the use of such data for business, residential address or telephone
+                    directory services or any solicitation service is specifically prohibited except with the prior written authority of the owner of the copyright.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="divInProgress" tabindex="-1" role="dialog" style="display: none">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content contentdata" id="inprogressContent">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Search in progress</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Please wait, system is searching data for your input.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalsubunits" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content" id="subunitcontents" style="">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                        </button>
+                        <h1 class="modal-title" id="SubUnitHeader" style="">
+                            Please select a unit
+                        </h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="spanunitCount" style=""></h2>
+                        <select id="ddlSubUnits" class="MultiUnit"></select>
+                        <p id="maxLimitMessage" style="">
+                            There are only 700 units listed here, please use Roll# search to get details about your property.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="divValidations" tabindex="-1" role="dialog" aria-labelledby="divValidationsLabel" aria-hidden="true" style="display: none">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content contentdata" id="ValidationsContent">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" onclick="bcaPortal.clearValidationsbackdrop();">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                        </button>
+                        <h4 class="modal-title" id="divValidationsLabel"></h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <p id="pvalidationMessage">
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="closeButton" data-dismiss="modal" onclick="bcaPortal.clearValidationsbackdrop();">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="searchresultsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content contentdata searchModalContent" id="searchResultsContent">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" onclick="bcaPortal.clearResultsbackdrop();">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Multiple properties found</h4>
+                        <span class="modalPlanSection"></span>
+
+                    </div>
+                    <div class="modal-body">
+
+                        <table id="tbladdressresults" class="display aasMultiple" cellspacing="0" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <td style="width: 10%">Plan</td>
+                                    <td style="width: 10%">PID</td>
+                                    <td style="width: 50%">Address</td>
+                                    <td style="width: 30%">Jurisdiction-Roll</td>
+
+                                </tr>
+                            </thead>
+                           
+                            
+                            <tbody></tbody>
+                        </table>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fadecontainer"></div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+        document.getElementById('ddlSearchType').selectedIndex = 0; //THIS IS ADDED TO SET DEFAULT 'CIVIC ADDRESS' Search option on browser back button
+        document.getElementById('rsbSearch').value = '';//THIS IS ADDED TO SET DEFAULT 'CIVIC ADDRESS' Search option on browser back button
+
+        $('#disclaimerinfo').click(function (e) {
+
+            if ($('#disclaimerinfo').hasClass('expand')) {
+                $('#disclaimerinfo').removeClass('expand');
+                $('#disclaimerinfo').addClass('collapse')
+                $('#search-disclaimer').css("display", "block");
+
+            }
+            else {
+                $('#disclaimerinfo').removeClass('collapse');
+                $('#disclaimerinfo').addClass('expand')
+                $('#search-disclaimer').css("display", "none");
+
+            }
+        });
+
+        // - property details page: collapse search bar by default
+        $('#searchcollapsecontrol').click(function (e) {
+            if ($('#searchcollapsecontrol').hasClass('expand')) {
+                $('#searchcollapsecontrol').removeClass('expand');
+                $('#searchcollapsecontrol').addClass('collapse')
+                $('#searchbody').css("display", "block");
+            }
+            else {
+                $('#searchcollapsecontrol').removeClass('collapse');
+                $('#searchcollapsecontrol').addClass('expand')
+                $('#searchbody').css("display", "none");
+            }
+        });
+
+
+    })
+</script>
+
+
+
+
+    
+
+
+<div class="main-internal-region" id="ASLandingpageRegisterSection">
+    <div class="left-region">
+        <h1>Register with BC Assessment</h1>
+
+        <div class="line-container">
+            <div class="left-image">
+                <img src="https://www.bcassessment.ca/Content/Images/search-map.png" />
+            </div>
+            <div class="right-caption">
+                Search properties on a map
+            </div>
+        </div>
+        <div class="line-container">
+            <div class="left-image">
+                <img src="https://www.bcassessment.ca/Content/Images/compare-documents.png" />
+            </div>
+            <div class="right-caption">
+                Compare property information and assessment values
+            </div>
+        </div>
+
+
+        <div class="line-container">
+            <div class="left-image">
+                <img src="https://www.bcassessment.ca/Content/Images/favourites.png" />
+            </div>
+            <div class="right-caption">
+                Store and access favourite properties across devices
+            </div>
+        </div>
+        <div class="line-container">
+            <div class="left-image">
+                <img src="https://www.bcassessment.ca/Content/Images/recently-viewed-40x.png" />
+            </div>
+            <div class="right-caption">
+                View recently viewed properties
+            </div>
+        </div>
+        <div class="registernow">
+            <button class="btn3" onclick="window.location.href='https://auth.bcassessment.ca/register/'">Register now for free</button>
+        </div>
+        <p>Already have an account? <a href="https://www.bcassessment.ca/Home/LoginInfo"> Log in</a></p>
+    </div>
+
+    <div class="right-region">
+        <img src="https://www.bcassessment.ca/Content/Images/publicAssessmentSearch.jpg" />
+    </div>
+</div>
+
+    
+</div>
+
+        
+
+<div id="page-footer">
+
+        <div class="row footer-menu footer-links-line1">
+            <div id="assessmentsearchfooterdiv" class="col-sm-2 col-xs-12"><a id="assessmentsearchfooter" href="https://www.bcassessment.ca/Property/AssessmentSearch?bcalogin=1&amp;act=">Assessment Search</a></div>
+            <div id="servicesproductsfooterdiv" class="col-sm-2 col-xs-12"><a id="servicesproductsfooter" href="https://info.bcassessment.ca/services-and-products/">Services &&nbsp;products</a></div>
+            <div id="propertyinfofooterdiv" class="col-sm-3 col-xs-12"><a id="propertyinfofooter" href="https://info.bcassessment.ca/property-information-trends">Property information &&nbsp;trends</a></div>
+            <div id="aboutusfooterdiv" class="col-sm-1 col-xs-12"><a id="aboutusfooter" href="https://info.bcassessment.ca/About-Us">About us</a></div>
+            <div id="contactusfooterdiv" class="col-sm-1 col-xs-12"><a id="contactusfooter" href="https://info.bcassessment.ca/contact-us">Contact us</a></div>
+        </div>
+        <div class="row footer-menu footer-links-line2">
+            <div class="footer-links-line2-left col-xs-12 col-sm-7">
+                <a id="newslinkfooter" href="https://info.bcassessment.ca/News">News</a><span class="footer-seperator-mobile" style="display: none;">|</span>
+                <a id="careerfooter" href="https://info.bcassessment.ca/Careers">Careers</a><span class="footer-seperator-mobile" style="display: none;">|</span>
+                <a id="indexforms" href="https://info.bcassessment.ca/Forms">Index of forms</a><span class="footer-seperator-mobile" style="display: none;">|</span>
+                <a id="glossaryfooter" href="https://info.bcassessment.ca/About-Us/Glossary">Glossary</a>
+            </div>
+
+            <div class="footer-links-line2-right col-xs-12 col-sm-5">
+                <div class="social-responsive" style="float:right">
+                    <span class="social-short">
+                        <a href="https://www.facebook.com/pages/BC-Assessment/168042796561277" target="_blank">
+
+                            <img class="socialimg" src="https://www.bcassessment.ca/Content/Images/BCA-Social-Icons-facebook.png" />
+                        </a>
+                    </span>
+                    <span class="social-short">
+                        <a href="https://twitter.com/bcassessment" target="-blank">
+                            <img class="socialimg" src="https://www.bcassessment.ca/Content/Images/BCA-Social-Icons-twitter.png" />
+                        </a>
+                    </span>
+                    <span>
+                        <a href="https://www.linkedin.com/company/bc-assessment" target="-blank">
+                            <img class="socialimg" src="https://www.bcassessment.ca/Content/Images/BCA-linkedin.png" />
+                        </a>
+                    </span>
+                    <span class="social-short">
+                        <a href="https://www.youtube.com/user/BCAssessmentVideos" target="-blank">
+                            <img class="socialimg" src="https://www.bcassessment.ca/Content/Images/BCA-youtube.png" />
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row footer-menu footer-links-bottom-line">
+            <div class="footer-copyright col-sm-4 col-xs-12">
+                <span class="copyright-year">©2020 BC Assessment</span>
+            </div>
+            <div class="footer-links-line3 col-sm-6 col-xs-12">
+                <span><a id="copyrightfooter" href="https://info.bcassessment.ca/Copyright">Copyright</a></span>
+                <span>
+                    <a id="disclaimerfooter" href="https://info.bcassessment.ca/Disclaimer">Disclaimer</a>
+                </span>
+                <span><a id="privacyfooter" href="https://info.bcassessment.ca/Privacy">Privacy statements</a></span>
+                <span><a id="termsofusefooter" href="https://info.bcassessment.ca/Pages/Terms_of_Use.aspx">Terms of use</a></span>
+            </div>
+        </div>
+
+  
+</div>
+
+
+        
+    </div>
+    <div class="modal fade" id="divNoCookies" tabindex="-1" role="dialog" style="display: none">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog modal-lg vertical-align-center">
+                <div class="modal-content" id="NoCookiesContent">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Cookies need to be enabled</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            The BC Assessment's property assessment search website requires cookies to be enabled on your browser. Please turn on cookies from your browser settings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+
+
+            if (navigator.cookieEnabled == false) {
+                if ($('#divNoCookies').modal) { $('#divNoCookies').modal('show'); }
+            }
+            else {
+                if ($('#divNoCookies').modal) { $('#divNoCookies').modal('hide'); }
+            }
+
+
+        });
+
+    </script>
+
+</body>
+
+<!-- Mirrored from www.bcassessment.ca/Property/AssessmentSearch?bcalogin=1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Nov 2020 19:10:29 GMT -->
+</html>

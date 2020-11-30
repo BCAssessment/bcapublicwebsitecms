@@ -1,0 +1,57 @@
+name: Build, Test, Deploy HomepagePreview
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - testing
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+
+    - uses: azure/docker-login@v1
+      with:
+        login-server: dev4gqggmqqacr.azurecr.io
+        username: ${{ secrets.acr_login }}
+        password: ${{ secrets.acr_password }}
+
+    - name: Build and push image to ACR
+      id: build-image
+      run: |
+        docker build "$GITHUB_WORKSPACE/BCAHomepagePreview" -f  "BCAHomepagePreview/Dockerfile" -t dev4gqggmqqacr.azurecr.io/devaks:${{ github.sha }}
+        docker push dev4gqggmqqacr.azurecr.io/devaks:${{ github.sha }}
+
+    - uses: azure/k8s-set-context@v1
+      with:
+         kubeconfig: ${{ secrets.aks_devaks_kubeConfig }}
+      id: login
+
+    - name: Create namespace
+      run: |
+        namespacePresent=`kubectl get namespace | grep development | wc -l`
+        if [ $namespacePresent -eq 0 ]
+        then
+            echo `kubectl create namespace development`
+        fi
+
+    - uses: azure/k8s-create-secret@v1
+      with:
+        namespace: development
+        container-registry-url: dev4gqggmqqacr.azurecr.io
+        container-registry-username: ${{ secrets.acr_login }}
+        container-registry-password: ${{ secrets.acr_password }}
+        secret-name: devaksdockerauth
+
+    - uses: azure/k8s-deploy@v1.3
+      with:
+        namespace: development
+        manifests: |
+          manifests/deployment-homepreview.yml
+          manifests/service-homepreview.yml
+        images: |
+          dev4gqggmqqacr.azurecr.io/devaks:${{ github.sha }}
+        imagepullsecrets: |
+          devaksdockerauth

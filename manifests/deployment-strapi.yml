@@ -1,0 +1,52 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "strapiapp"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "strapiapp"
+  template:
+    metadata:
+      labels:
+        app: "strapiapp"
+    spec:
+      containers:
+        - name: "strapiapp"
+          image: "dev4gqggmqqacr.azurecr.io/devaks"
+          ports:
+          - containerPort: 1337
+          env:
+            - name: "DOCKER"
+              value: "true"
+            - name: "APP_NAME"
+              value: "strapi-app"
+            - name: "DATABASE_NAME"
+              value: "strapi"
+            - name: "DATABASE_PORT"
+              value: "5432"
+            - name: "DATABASE_SSL"
+              value: "true"
+            - name: "DATABASE_HOST"
+              valueFrom:
+                secretKeyRef:
+                  name: "akv-secrets"
+                  key: DBHOST
+            - name: "DATABASE_USERNAME"
+              valueFrom:
+                secretKeyRef:
+                  name: "akv-secrets"
+                  key: DBUID
+            - name: "DATABASE_PASSWORD"
+              valueFrom:
+                secretKeyRef:
+                  name: "akv-secrets"
+                  key: DBPWD
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "500m"
+            limits:
+              memory: "256Mi"
+              cpu: "750m"
