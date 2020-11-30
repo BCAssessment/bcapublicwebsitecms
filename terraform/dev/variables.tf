@@ -10,6 +10,12 @@ variable "environment" {
   description = "The current working environment"
 }
 
+variable "RG_Presyntax" {
+  type = string
+  default = "NPD01-CACN-RGP-"
+  description = "the default presyntax for a resource group in NPD environment"
+}
+
 variable "namespace" {
   type = string
   default = "development"
