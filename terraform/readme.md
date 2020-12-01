@@ -53,7 +53,7 @@ see what you can see:
 then log out of the service account
 `az logout`
 
-If you won't have a namespace yet created in Terraform Cloud go ahead and create on
+If you don't have a namespace yet created in Terraform Cloud go ahead and create one
 
 Lastly in Terraform cloud, under workspace you wish to work in, we need to config Terraform Cloud with these variables:
 **ensure the client_secret is set to "sensitive"**
@@ -64,9 +64,14 @@ client_id={appId}
 client_secret={password} - displayed when the service account was created **ensure the client_secret is set to "sensitive"**
 }
 
+## Execute Terraform Code
+
+navigate to 
+
+
 ## Manage k8s:
 
-Get CLI to use for connecting to azuer k8s cluster
+Get CLI to use for connecting to azure k8s cluster
 `az aks install-cli`
 `az aks get-credentials --resource-group dev-qg9132f9-k8s --name dev-qg9132f9-aks`
 `kubectl get nodes`

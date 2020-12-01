@@ -11,14 +11,14 @@ variable "environment" {
 }
 
 variable "RG_Presyntax" {
-  type = string
-  default = "NPD01-CACN-RGP-"
+  type        = string
+  default     = "NPD01-CACN-RGP-"
   description = "the default presyntax for a resource group in NPD environment"
 }
 
 variable "namespace" {
-  type = string
-  default = "development"
+  type        = string
+  default     = "development"
   description = "The k8s namespace used for this deployment -- used for helm chart deployments for CSI"
 }
 
@@ -58,11 +58,11 @@ variable "client_id" {
 }
 
 variable "subscription_id" {
-  type = string
+  type        = string
   description = "The Azure 'subscription id'"
 }
 
 variable "tenant_id" {
-  type = string
+  type        = string
   description = "The Azure 'tenant id'"
 }
