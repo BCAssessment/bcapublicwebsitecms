@@ -1,6 +1,6 @@
-# #
-# # This TF sets up an environment for an Azure
-# #
+#
+# This TF sets up an environment for an Azure
+#
 
 # # The basic setup of the TF environment
 # terraform {
@@ -13,16 +13,26 @@
 #   }
 # }
 
-# #setup for TF cloud - CLI version
-# terraform {
-#   backend "remote" {
-#     organization = "BCAssessment"
+#terraform {
+#  backend "remote" {
+#    organization = "BC-Assessment"
+#
+#    workspaces {
+#      name = "GitHub-Terraform"
+#    }
+#    
+#}
 
-#     workspaces {
-#       name = "dev"
-#     }
-#   }
-# }
+
+#setup for TF cloud - CLI version
+terraform {
+  backend "remote" {
+    organization = "BCAssessment"
+    workspaces {
+      name = "test"
+    }
+  }
+}
 
 
 provider "azurerm" {

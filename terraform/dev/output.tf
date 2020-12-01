@@ -14,10 +14,10 @@ output "acr" {
   description = "The name of the Azure Container Registry"
 }
 
-output "akv" {
-  value       = module.bca-infrastructure.akvname
-  description = "The Azure Key Vault Name"
-}
+# output "akv" {
+#   value       = module.bca-infrastructure.akvname
+#   description = "The Azure Key Vault Name"
+# }
 
 # TODO: remove this once AKV is fully working
 output "psqluid" {
