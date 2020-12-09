@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "devaks-4b3c"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "devaks-4b3c"
+  template:
+    metadata:
+      labels:
+        app: "devaks-4b3c"
+    spec:
+      containers:
+        - name: "devaks-4b3c"
+          image: "dev9w9eilatacr.azurecr.io/devaks"
+          ports:
+          - containerPort: 1337
