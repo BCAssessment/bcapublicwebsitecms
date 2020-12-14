@@ -13,14 +13,14 @@ jobs:
 
     - uses: azure/docker-login@v1
       with:
-        login-server: dev4gqggmqqacr.azurecr.io
+        login-server: dev9w9eilatacr.azurecr.io
         username: ${{ secrets.acr_dev9w9eilatacr_username }}
         password: ${{ secrets.acr_dev9w9eilatacr_password }}
 
     - name: Build and push image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/strapi" -f  "strapi/Dockerfile" -t dev9w9eilatacr.azurecr.io/devaks:${{ github.sha }} -t dev4gqggmqqacr.azurecr.io/devaks:dev
+        docker build "$GITHUB_WORKSPACE/strapi" -f  "strapi/Dockerfile" -t dev9w9eilatacr.azurecr.io/devaks:${{ github.sha }} -t dev9w9eilatacr.azurecr.io/devaks:dev
         docker push dev9w9eilatacr.azurecr.io/devaks:${{ github.sha }}
 
     - uses: azure/k8s-set-context@v1
