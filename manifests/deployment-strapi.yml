@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: "strapiapp"
-          image: "dev4gqggmqqacr.azurecr.io/devaks"
+          image: "dev9w9eilatacr.azurecr.io/devaks"
           ports:
           - containerPort: 1337
           env:
