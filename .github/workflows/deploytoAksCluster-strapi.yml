@@ -1,3 +1,4 @@
+# This is the active strapi deployment.
 name: Build, Test Deploy Strapi
 on:
   push:
