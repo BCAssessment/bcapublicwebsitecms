@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-      - dev
-      - testing
 
 jobs:
   build-and-deploy:
@@ -21,7 +19,7 @@ jobs:
     - name: Build and push image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/strapi" -f  "strapi/Dockerfile" -t dev9w9eilatacr.azurecr.io/devaks:${{ github.sha }}
+        docker build "$GITHUB_WORKSPACE/strapi" -f  "strapi/Dockerfile" -t dev9w9eilatacr.azurecr.io/devaks:${{ github.sha }} -t dev4gqggmqqacr.azurecr.io/devaks:dev
         docker push dev9w9eilatacr.azurecr.io/devaks:${{ github.sha }}
 
     - uses: azure/k8s-set-context@v1
