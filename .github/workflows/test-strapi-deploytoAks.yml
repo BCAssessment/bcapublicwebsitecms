@@ -53,7 +53,7 @@ jobs:
       with:
         namespace: development
         manifests: |
-          manifests/deployment-strapi.yml
+          manifests/deployment-strapi-test.yml
           manifests/service-strapi.yml
         images: |
           dev9w9eilatacr.azurecr.io/devaks:dev
