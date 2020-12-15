@@ -1,29 +1,35 @@
-# This is the active strapi deployment.
-name: Dev - Strapi - Build Test Deploy
+name: Manual Promote Strapi Dev->Test
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # Check that the init is done by specific approved users of the Git repo.
+    if: |
+      github.actor == 'Cameron-Shaw' ||
+      github.actor == 'Nick-Cunningham' ||
+      github.actor == 'bashbang'
     steps:
-    - name: Git Checkout
-      uses: actions/checkout@master
-
     - name: Login to ACR
       uses: azure/docker-login@v1
       with:
         login-server: dev9w9eilatacr.azurecr.io
-        username: ${{ secrets.acr_dev9w9eilatacr_username }}
-        password: ${{ secrets.acr_dev9w9eilatacr_password }}
+        username: ${{ secrets.acr_login }}
+        password: ${{ secrets.acr_password }}
 
-    - name: Build and push image to ACR
+    - name: Promote ACR image Dev->Test and push newly tagged image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/strapi" -f "strapi/Dockerfile" -t dev9w9eilatacr.azurecr.io/devaks:${{ github.sha }} -t dev9w9eilatacr.azurecr.io/devaks:dev
-        docker push dev9w9eilatacr.azurecr.io/devaks
+        # TODO: This routine pulls the image, re-tags it, then re-pushes it.  There's deploy/load/bandwidth in the pull portion.
+        # there doesn't seem to be an easy built in AZ way of added a tag to an already submitted image.
+        # There actually is...but I'm not in love with the method:
+        # It was designed for AWS, but there may be a way to do this with Azure: https://davin.ninja/amazon-ecr-adding-tag-image-already-pushed/
+        # Basically it downloads the ECR manafest definition file then redeploys the same manafest file with a new tag.
+        docker pull dev9w9eilatacr.azurecr.io/devaks:dev
+        docker tag prod4gqggmqqacr.azurecr.io/devaks:dev dev9w9eilatacr.azurecr.io/devaks:test
+        docker push dev9w9eilatacr.azurecr.io/devaks:test
+        # Bonus - This above method can easily be adapted for test->prod.  The manifest method won't work between different hosted ACRs.
 
     - name: Login to AKS
       uses: azure/k8s-set-context@v1
@@ -42,20 +48,31 @@ jobs:
     - name: ACR to AKS secrets in place
       uses: azure/k8s-create-secret@v1
       with:
-        namespace: development
+        namespace: testing
         container-registry-url: dev9w9eilatacr.azurecr.io
-        container-registry-username: ${{ secrets.acr_dev9w9eilatacr_username }}
-        container-registry-password: ${{ secrets.acr_dev9w9eilatacr_password }}
+        container-registry-username: ${{ secrets.acr_login }}
+        container-registry-password: ${{ secrets.acr_password }}
         secret-name: devaksdockerauth
+
+    - name: Git Checkout   # Needed for manifests folder
+      uses: actions/checkout@main
 
     - name: Update (or create) AKS deployments
       uses: azure/k8s-deploy@v1.3
       with:
-        namespace: development
+        namespace: testing
         manifests: |
-          manifests/deployment-strapi-test.yml
+          manifests/deployment-strapi.yml
           manifests/service-strapi.yml
         images: |
-          dev9w9eilatacr.azurecr.io/devaks:dev
+          dev9w9eilatacr.azurecr.io/devaks:test
         imagepullsecrets: |
           devaksdockerauth
+  permissions-failure:
+    if: github.actor != 'bashbang'
+    steps:
+    - name: Permissions Error
+      run: |
+        echo "You don't have permissions to run promote from dev to testing. Contact your administrator."
+        exit 1
+      id: permission-error
