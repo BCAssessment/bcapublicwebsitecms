@@ -66,18 +66,14 @@ client_secret={password} - displayed when the service account was created **ensu
 
 ## Execute Terraform Code
 
-navigate to 
+Navigate to the terraform folder and environment you wish to deploy:
+`cd terraform/dev/`
 
+Init the terraform environment. This downloads module and provider dependencies.
+`terraform init`
 
-## Manage k8s:
+Execute the terraform plan which will output to the screen what terraform is expected to do.  It will show various resources that will be created.  If this is a consecutive run it will show you the changes that terraform will attempt to make. This may include additions, changes, and deletions.
+`terraform plan`
 
-Get CLI to use for connecting to azure k8s cluster
-`az aks install-cli`
-`az aks get-credentials --resource-group dev-qg9132f9-k8s --name dev-qg9132f9-aks`
-`kubectl get nodes`
-
-Check to see if there's any k8s upgrades available
-`az aks get-upgrades --resource-group dev-qg9132f9-k8s --name dev-qg9132f9-aks --output table `
-
-upgrade if you wish:
-`az aks upgrade --resource-group dev-qg9132f9-k8s --name dev-qg9132f9-aks --kubernetes-version 1.18.10`
+If you're happy with the plan, proceed with executing the instructions with:
+`terraform apply`
