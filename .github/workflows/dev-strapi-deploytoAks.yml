@@ -1,5 +1,5 @@
 # This is the active strapi deployment.
-name: Dev - Strapi - Build Test Deploy
+name: Dev Strapi - Build Test Deploy
 on:
   push:
     branches:
