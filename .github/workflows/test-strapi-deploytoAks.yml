@@ -1,0 +1,61 @@
+# This is the active strapi deployment.
+name: Dev - Strapi - Build Test Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@master
+
+    - name: Login to ACR
+      uses: azure/docker-login@v1
+      with:
+        login-server: dev9w9eilatacr.azurecr.io
+        username: ${{ secrets.acr_dev9w9eilatacr_username }}
+        password: ${{ secrets.acr_dev9w9eilatacr_password }}
+
+    - name: Build and push image to ACR
+      id: build-image
+      run: |
+        docker build "$GITHUB_WORKSPACE/strapi" -f "strapi/Dockerfile" -t dev9w9eilatacr.azurecr.io/devaks:${{ github.sha }} -t dev9w9eilatacr.azurecr.io/devaks:dev
+        docker push dev9w9eilatacr.azurecr.io/devaks
+
+    - name: Login to AKS
+      uses: azure/k8s-set-context@v1
+      with:
+         kubeconfig: ${{ secrets.aks_devaks_kubeConfig }}
+      id: login
+
+    - name: Create namespace (if needed)
+      run: |
+        namespacePresent=`kubectl get namespace | grep development | wc -l`
+        if [ $namespacePresent -eq 0 ]
+        then
+            echo `kubectl create namespace development`
+        fi
+
+    - name: ACR to AKS secrets in place
+      uses: azure/k8s-create-secret@v1
+      with:
+        namespace: development
+        container-registry-url: dev9w9eilatacr.azurecr.io
+        container-registry-username: ${{ secrets.acr_dev9w9eilatacr_username }}
+        container-registry-password: ${{ secrets.acr_dev9w9eilatacr_password }}
+        secret-name: devaksdockerauth
+
+    - name: Update (or create) AKS deployments
+      uses: azure/k8s-deploy@v1.3
+      with:
+        namespace: development
+        manifests: |
+          manifests/deployment-strapi.yml
+          manifests/service-strapi.yml
+        images: |
+          dev9w9eilatacr.azurecr.io/devaks:dev
+        imagepullsecrets: |
+          devaksdockerauth

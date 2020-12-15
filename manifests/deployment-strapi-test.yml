@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: "strapiapp"
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: "strapiapp"
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: "strapiapp"
-          image: "dev9w9eilatacr.azurecr.io/devaks:dev"
+          image: "dev9w9eilatacr.azurecr.io/devaks:test"
           ports:
           - containerPort: 1337
           env:
