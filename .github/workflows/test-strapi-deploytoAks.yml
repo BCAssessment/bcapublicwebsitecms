@@ -27,7 +27,7 @@ jobs:
         # It was designed for AWS, but there may be a way to do this with Azure: https://davin.ninja/amazon-ecr-adding-tag-image-already-pushed/
         # Basically it downloads the ECR manafest definition file then redeploys the same manafest file with a new tag.
         docker pull dev9w9eilatacr.azurecr.io/devaks:dev
-        docker tag prod4gqggmqqacr.azurecr.io/devaks:dev dev9w9eilatacr.azurecr.io/devaks:test
+        docker tag dev9w9eilatacr.azurecr.io/devaks:dev dev9w9eilatacr.azurecr.io/devaks:test
         docker push dev9w9eilatacr.azurecr.io/devaks:test
         # Bonus - This above method can easily be adapted for test->prod.  The manifest method won't work between different hosted ACRs.
 
