@@ -43,6 +43,6 @@ Once the fields are filled out and the images are uploaded, click save. This wil
 
 ## Enabling the Carousel API
 
-When you have your first carousel that's ready to be viewed in the BCAssessmentClone or BCAssessmentPreview applications, you need to enable the API. Under General in the left-hand menu, click Settings. Under Users & Permissions Plugin in the settings menu, click Roles. Click the Public role, and you will be brought to the public role page. 
+When you have your first carousel that's ready to be viewed in the BCAHomepageClone or BCAHomepagePreview applications, you need to enable the API. Under General in the left-hand menu, click Settings. Under Users & Permissions Plugin in the settings menu, click Roles. Click the Public role, and you will be brought to the public role page. 
 
 Scroll down to the Permissions section in the public role page. You will see the Carousel section under the Application heading. Check the checkboxes in the Carousel section beside count, find, and findone. Afterward, click the save button. Your API will now be available at the /Carousels path on Strapi. 

@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Before running BCAHomepageClone or BCAHomepagePreview, you need to configure the following environment variables. This can be done by creating a .env file based on the .env.template file found [here](.env.template). The variables are defined in the table below.
+Before running BCAHomepageClone or BCAHomepagePreview, you need to configure the following environment variables. This can be done by creating a .env file based on the .env.template file found [here](../BCAHomepageClone/.env.template) or [here](../BCAHomepagePreview/.env.template). The variables are defined in the table below.
 
 | Variable Name                 | Description                                                                                                               | Example Value                   |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------------|
