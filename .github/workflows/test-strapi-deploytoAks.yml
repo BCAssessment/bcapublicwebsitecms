@@ -15,8 +15,8 @@ jobs:
       uses: azure/docker-login@v1
       with:
         login-server: dev9w9eilatacr.azurecr.io
-        username: ${{ secrets.acr_login }}
-        password: ${{ secrets.acr_password }}
+        username: ${{ secrets.acr_dev9w9eilatacr_username }}
+        password: ${{ secrets.acr_dev9w9eilatacr_password }}
 
     - name: Promote ACR image Dev->Test and push newly tagged image to ACR
       id: build-image
@@ -50,8 +50,8 @@ jobs:
       with:
         namespace: testing
         container-registry-url: dev9w9eilatacr.azurecr.io
-        container-registry-username: ${{ secrets.acr_login }}
-        container-registry-password: ${{ secrets.acr_password }}
+        container-registry-username: ${{ secrets.acr_dev9w9eilatacr_username }}
+        container-registry-password: ${{ secrets.acr_dev9w9eilatacr_password }}
         secret-name: devaksdockerauth
 
     - name: Git Checkout   # Needed for manifests folder
@@ -70,7 +70,9 @@ jobs:
           devaksdockerauth
   permissions-failure:
     runs-on: ubuntu-latest
-    if: github.actor != 'bashbang'
+    if: github.actor == 'Cameron-Shaw' ||
+        github.actor == 'Nick-Cunningham' ||
+        github.actor == 'bashbang'
     steps:
     - name: Permissions Error
       run: |
