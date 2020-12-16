@@ -69,6 +69,7 @@ jobs:
         imagepullsecrets: |
           devaksdockerauth
   permissions-failure:
+    runs-on: ubuntu-latest
     if: github.actor != 'bashbang'
     steps:
     - name: Permissions Error
