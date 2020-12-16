@@ -1,5 +1,1 @@
-# Strapi application
-
-A quick description of your strapi application
-
-
+See /docs folder readme found [here](../../docs/strapi_readme.md).
