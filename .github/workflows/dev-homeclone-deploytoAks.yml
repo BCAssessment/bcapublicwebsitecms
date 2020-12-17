@@ -1,5 +1,5 @@
-# This is the active strapi deployment.
-name: Dev Strapi - Build Test Deploy
+name: Dev HomeClone - Build Test Deploy
+
 on:
   push:
     branches:
@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Git Checkout
-      uses: actions/checkout@main
+    - uses: actions/checkout@main
 
     - name: Login to ACR
-      uses: azure/docker-login@v1
+    - uses: azure/docker-login@v1
       with:
         login-server: dev9w9eilatacr.azurecr.io
         username: ${{ secrets.acr_dev9w9eilatacr_username }}
@@ -22,8 +22,8 @@ jobs:
     - name: Build and push image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/strapi" -f "strapi/Dockerfile" -t dev9w9eilatacr.azurecr.io/devaks:${{ github.sha }} -t dev9w9eilatacr.azurecr.io/devaks:dev
-        docker push dev9w9eilatacr.azurecr.io/devaks
+        docker build "$GITHUB_WORKSPACE/BCAHomepageClone" -f "BCAHomepageClone/Dockerfile" -t dev9w9eilatacr.azurecr.io/homecloneapp:${{ github.sha }} -t dev9w9eilatacr.azurecr.io/homecloneapp:dev
+        docker push dev9w9eilatacr.azurecr.io/homecloneapp
 
     - name: Login to AKS
       uses: azure/k8s-set-context@v1
@@ -53,8 +53,8 @@ jobs:
       with:
         namespace: development
         manifests: |
-          manifests/deployment-strapi-dev.yml
-          manifests/service-strapi.yml
+          manifests/deployment-homeclone-dev.yml
+          manifests/service-homeclone.yml
         images: |
           dev9w9eilatacr.azurecr.io/devaks:dev
         imagepullsecrets: |
