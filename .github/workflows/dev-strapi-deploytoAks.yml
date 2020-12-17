@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - strapi/**
 
 jobs:
   build-and-deploy:
