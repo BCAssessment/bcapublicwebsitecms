@@ -1,5 +1,5 @@
 #!/bin/sh
 
-echo "Starting Strapi App"
-npm run start
-#tail -f /dev/null
+echo "Starting HomeCloneApp App"
+#npm run start
+tail -f /dev/null
