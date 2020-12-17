@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Git Checkout
-    - uses: actions/checkout@main
+      uses: actions/checkout@main
 
     - name: Login to ACR
-    - uses: azure/docker-login@v1
+      uses: azure/docker-login@v1
       with:
         login-server: dev9w9eilatacr.azurecr.io
         username: ${{ secrets.acr_dev9w9eilatacr_username }}
