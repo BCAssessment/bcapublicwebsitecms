@@ -23,7 +23,7 @@ spec:
             - name: "APP_NAME"
               value: "strapi-app"
             - name: "DATABASE_NAME"
-              value: "strapi"
+              value: "strapitest"
             - name: "DATABASE_PORT"
               value: "5432"
             - name: "DATABASE_SSL"
