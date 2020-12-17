@@ -25,6 +25,10 @@ Once the packages are installed, you can build Strapi by running
 
     npm run build
 
+If you want to build Strapi to use a sqlite database for local development, build build Strapi with the NODE_ENV environment variable set to local. This can be done at the same time as the build using the following command:
+
+    cmd /V /C "set NODE_ENV=local&&npm run build"
+
 To start Strapi in development mode, run 
 
     npm run develop
