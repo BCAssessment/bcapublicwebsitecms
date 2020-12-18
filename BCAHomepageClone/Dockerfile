@@ -7,7 +7,6 @@ WORKDIR /src/app
 COPY app /src/app/
 
 RUN npm install && \
-    npm global add react-scripts@3.4.3 \
     npm run build
 
 FROM nginx:alpine
