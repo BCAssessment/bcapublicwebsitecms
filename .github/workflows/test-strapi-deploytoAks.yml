@@ -56,8 +56,10 @@ jobs:
         container-registry-password: ${{ secrets.acr_dev9w9eilatacr_password }}
         secret-name: devaksdockerauth
 
-    - name: Git Checkout   # Needed for manifests folder
-      uses: actions/checkout@main
+    - name: Git Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: main
 
     - name: Update (or create) AKS deployments
       uses: azure/k8s-deploy@v1.3

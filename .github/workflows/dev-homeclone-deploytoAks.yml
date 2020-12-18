@@ -13,7 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Git Checkout
-      uses: actions/checkout@main
+      uses: actions/checkout@v2
+      with:
+        ref: main
 
     - name: Login to ACR
       uses: azure/docker-login@v1
@@ -59,6 +61,6 @@ jobs:
           manifests/deployment-homeclone-dev.yml
           manifests/service-homeclone.yml
         images: |
-          dev9w9eilatacr.azurecr.io/homecloneapp:dev
+          dev9w9eilatacr.azurecr.io/homecloneapp:${{ github.sha }}
         imagepullsecrets: |
           devaksdockerauth

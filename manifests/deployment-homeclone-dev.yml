@@ -16,11 +16,11 @@ spec:
         - name: "homecloneapp"
           image: "dev9w9eilatacr.azurecr.io/homecloneapp:dev"
           ports:
-          - containerPort: 80
+          - containerPort: 3000
           resources:
             requests:
-              memory: "128Mi"
+              memory: "256Mi"
               cpu: "500m"
             limits:
-              memory: "256Mi"
+              memory: "512Mi"
               cpu: "750m"
