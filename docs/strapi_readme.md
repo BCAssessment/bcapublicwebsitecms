@@ -25,7 +25,7 @@ Once the packages are installed, you can build Strapi by running
 
     npm run build
 
-If you want to build Strapi to use a sqlite database for local development, build build Strapi with the NODE_ENV environment variable set to local. This can be done at the same time as the build using the following command:
+If you want to build Strapi to use a sqlite database for local development, build Strapi with the NODE_ENV environment variable set to local. This can be done at the same time as the build using the following command:
 
     cmd /V /C "set NODE_ENV=local&&npm run build"
 
@@ -37,6 +37,14 @@ To start Strapi in production mode, run
 
     npm start
 
+To start Strapi locally using the sqlite database, run either
+
+    cmd /V /C "set NODE_ENV=local&&npm start"
+
+or
+
+    cmd /V /C "set NODE_ENV=local&&npm run develop"
+    
 ## Adding a New Carousel
 
 When Strapi is running for the first time, you'll need to create an admin user. You will be prompted for this automatically when you access the Strapi admin dashboard for the first time. 
