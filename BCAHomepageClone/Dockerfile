@@ -6,8 +6,8 @@ WORKDIR /src/app
 
 COPY app /src/app/
 
-RUN npm install && \
-    npm run build
+#RUN npm install && \
+#    npm run build
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
