@@ -10,9 +10,8 @@ RUN npm install && \
     npm run build
 
 COPY docker-entrypoint.sh /usr/local/bin/
-RUN tail -f /dev/null
 
-#RUN chmod +x /usr/local/bin/docker-entrypoint.sh
-#ENTRYPOINT ["docker-entrypoint.sh"]
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 #CMD ["npm", "start"]
