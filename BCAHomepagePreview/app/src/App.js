@@ -34,7 +34,7 @@ function App() {
 
   let strapi_endpoint = process.env.REACT_APP_STRAPI_API_ENDPOINT;
   let prod_banners = process.env.REACT_APP_PROD_BANNERS;
-  let strapi_root = process.env.REACT_APP_STRAPI_ROOT;
+  let strapi_root = process.env.REACT_APP_STRAPI_ROOT_URL;
 
   if(strapi_endpoint) {
     if(prod_banners === "true") {
