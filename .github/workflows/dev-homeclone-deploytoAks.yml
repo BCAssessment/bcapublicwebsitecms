@@ -15,7 +15,7 @@ jobs:
     - name: Git Checkout
       uses: actions/checkout@v2
       with:
-        ref: pipeline
+        ref: main
 
     - name: Login to ACR
       uses: azure/docker-login@v1
