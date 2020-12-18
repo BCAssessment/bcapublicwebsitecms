@@ -5,8 +5,10 @@ require('dotenv').config();
 
 export default function BannerCarousel(props) {
 
+  // eslint-disable-next-line
   const [Banners, setBanners] = useState(props.Banners)
   const [activeIndex, setActiveIndex] = useState(0);
+  // eslint-disable-next-line
   const [lengthOfBanners, setLengthOfBanners] = useState(props.Banners.length);
 
   const buttonStyles = (direction) => {
@@ -57,6 +59,7 @@ export default function BannerCarousel(props) {
       // Otherwise it will keep going and the banners won't be smooth and will eventually crash the browser!
       clearTimeout(autoPlay);
     }
+    // eslint-disable-next-line
 }, [activeIndex])
 
     return (
