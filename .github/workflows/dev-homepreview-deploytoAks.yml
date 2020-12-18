@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - BCAHomepagePreview/**
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
