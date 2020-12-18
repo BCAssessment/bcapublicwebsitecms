@@ -61,6 +61,6 @@ jobs:
           manifests/deployment-strapi-dev.yml
           manifests/service-strapi.yml
         images: |
-          dev9w9eilatacr.azurecr.io/devaks:dev
+          dev9w9eilatacr.azurecr.io/devaks:${{ github.sha }}
         imagepullsecrets: |
           devaksdockerauth
