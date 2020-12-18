@@ -15,7 +15,7 @@ export default function Banner(props) {
          } = props.activeBanner
 
     const RootUrl = props.RootUrl;
-
+    // eslint-disable-next-line
     const {height, width} = useWindowDimensions(); 
     const determineBackgroundImage = (screenWidth, image, tabletImage, mobileImage, smallMobileImage, rootUrl) => {
         if(screenWidth > 767) {

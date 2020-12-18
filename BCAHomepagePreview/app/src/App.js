@@ -52,6 +52,7 @@ function App() {
         setBanners(BannersArr);
       })
       .catch(console.error)
+      // eslint-disable-next-line
   }, []);
 
   return (
