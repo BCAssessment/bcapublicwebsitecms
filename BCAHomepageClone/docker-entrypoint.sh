@@ -2,5 +2,4 @@
 
 echo "Starting HomeCloneApp App"
 npm run start
-#tail -f /dev/null
-
+tail -f /dev/null
