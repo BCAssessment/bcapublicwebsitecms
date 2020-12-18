@@ -61,6 +61,6 @@ jobs:
           manifests/deployment-homepreview-dev.yml
           manifests/service-homepreview.yml
         images: |
-          dev9w9eilatacr.azurecr.io/homepreviewapp:dev
+          dev9w9eilatacr.azurecr.io/homepreviewapp:${{ github.sha }}
         imagepullsecrets: |
           devaksdockerauth
