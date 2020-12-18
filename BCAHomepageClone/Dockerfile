@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:10 AS builder
 
 RUN mkdir /srv/app && chown 1000:1000 -R /srv/app
 
@@ -7,10 +7,14 @@ WORKDIR /src/app
 COPY app /src/app/
 
 RUN npm install && \
-   npm run build
+    npm run build
 
-COPY docker-entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
-ENTRYPOINT ["docker-entrypoint.sh"]
+FROM nginx:alpine
 
-#CMD ["npm", "start"]
+WORKDIR /usr/share/nginx/html
+
+RUN rm -rf ./*
+
+COPY --from=builder /src/app/build .
+
+ENTRYPOINT ["nginx", "-g", "daemon off;"]

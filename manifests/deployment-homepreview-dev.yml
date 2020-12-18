@@ -17,3 +17,10 @@ spec:
           image: "dev9w9eilatacr.azurecr.io/homepreviewapp:dev"
           ports:
           - containerPort: 80
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "500m"
+            limits:
+              memory: "512Mi"
+              cpu: "750m"
