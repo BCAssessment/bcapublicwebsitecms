@@ -58,6 +58,6 @@ jobs:
           manifests/deployment-homeclone-dev.yml
           manifests/service-homeclone.yml
         images: |
-          dev9w9eilatacr.azurecr.io/devaks:dev
+          dev9w9eilatacr.azurecr.io/homecloneapp:dev
         imagepullsecrets: |
           devaksdockerauth
