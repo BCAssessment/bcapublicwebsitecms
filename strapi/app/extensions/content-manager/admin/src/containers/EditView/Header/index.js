@@ -136,7 +136,7 @@ const Header = ({
           },
         },
         {
-          color: 'success',
+          color: 'primary',
           label: 'Production',
           isLoading: false,
           type: 'button',
